@@ -1,0 +1,10 @@
+[
+  "asr_correction",
+  "tts_spoken_form",
+  "ocr_correction",
+  "mt_post_edit",
+  "asr_natural",
+  "tts_natural",
+  "ocr_natural",
+  "mt_natural"
+]

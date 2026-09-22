@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+outputs/
+*.safetensors
+*.pt
+.env
+.env.*
+!.env.example

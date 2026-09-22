@@ -1,0 +1,18 @@
+{
+  "id": "ASR_CORRECTION",
+  "kind": "structured_test",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是 Barbet 的資料判讀助理，使用臺灣繁體中文。請依據輸入、任務規格與可引用的證據，判斷候選結果並執行指定操作。忠實保留來源內容與識別碼；證據不足時，依任務規格棄答或交由人工確認。請遵守 response_format 指定的輸出格式。"
+    },
+    {
+      "role": "user",
+      "content": "BARBET_SFT_REQUEST_V3(payload={\"inputs\":[{\"id\":\"ref\",\"type\":\"reference_transcript\",\"units\":[{\"id\":\"ref:u01\",\"text\":\"承辦人黃雅婷在會議中說明。\"},{\"id\":\"ref:u02\",\"text\":\"黃雅婷將於2030 年 1 月 9 日檢查文件的數位簽章。\"},{\"id\":\"ref:u03\",\"text\":\"地點為南投縣，案件為TW-BGD2-198002。\"}]},{\"id\":\"hyp\",\"type\":\"asr_hypothesis\",\"units\":[{\"id\":\"hyp:u01\",\"text\":\"承辦人黃雅婷在會議中說明。\"},{\"id\":\"hyp:u02\",\"text\":\"黃雅婷將於2030 年 1 月 9 日檢查文件的數位千章。\"},{\"id\":\"hyp:u03\",\"text\":\"地點為南投縣，案件為TW-BGD2-198002。\"}]}],\"primitive\":\"EDIT\",\"response_format\":{\"empty_target_example\":\"{\\\"schema\\\":\\\"barbet.bgd.target/v2\\\",\\\"target\\\":{}}\",\"instruction\":\"輸出單一 JSON 物件，且只包含 schema 與 target 兩個最外層欄位。只填入有輸入證據支持的結果，不要加上 Markdown 程式碼區塊或額外說明。\",\"serializer\":\"JSON\",\"serializer_version\":\"2\",\"target_schema\":\"barbet.bgd.target/v2\"},\"schema\":\"barbet.sft.request/v3\",\"task_family\":\"ASR_CORRECTION\",\"task_spec\":{\"abstention_allowed\":false,\"allowed_actions\":[\"EDIT\"],\"allowed_error_types\":[\"MISSING_REALIZATION\",\"UNSUPPORTED_ADDITION\",\"VALUE_CORRUPTION\",\"IDENTITY_MISMATCH\",\"ORDER_VIOLATION\",\"BOUNDARY_SHIFT\",\"DUPLICATION\",\"STRUCTURE_BREAK\",\"CONSTRAINT_VIOLATION\",\"INSUFFICIENT_EVIDENCE\"],\"allowed_labels\":[\"FAIL\"],\"constraints\":{},\"instruction\":\"比較可見來源、候選與限制，只執行有證據支持的最小修正。\",\"output_contract\":\"decision+evidence+confidence+typed_action\",\"query\":\"本次任務要求如下，請附上決定性依據：修正 ASR 假設中的近音錯誤，其他逐字內容保持不變。\",\"requested_schema\":{},\"required_evidence\":true}})"
+    }
+  ],
+  "reference": "{\"schema\":\"barbet.bgd.target/v2\",\"target\":{\"action\":{\"arguments\":{\"op\":\"REPLACE\",\"replacement\":\"黃雅婷將於2030 年 1 月 9 日檢查文件的數位簽章。\",\"target\":\"hyp:u02\"},\"tool\":\"EDIT\"},\"confidence_semantics\":\"synthetic_prior_not_calibration_gold\",\"confidence_target\":0.97,\"decision\":\"FAIL\",\"edit_operations\":[{\"op\":\"REPLACE\",\"replacement\":\"黃雅婷將於2030 年 1 月 9 日檢查文件的數位簽章。\",\"target\":\"hyp:u02\"}],\"errors\":[{\"reason_code\":\"CHARACTER_SUBSTITUTION\",\"severity\":\"major\",\"source_evidence\":[\"ref:u02\"],\"target_evidence\":[\"hyp:u02\"],\"type\":\"CONSTRAINT_VIOLATION\"}],\"evidence\":[\"ref:u02\",\"hyp:u02\"],\"output_text\":\"承辦人黃雅婷在會議中說明。黃雅婷將於2030 年 1 月 9 日檢查文件的數位簽章。地點為南投縣，案件為TW-BGD2-198002。\",\"reference_input_id\":\"ref\"}}",
+  "max_new_tokens": 1024,
+  "reference_note": "Not used as assistant input. Structured requests intentionally contain a visible reference.",
+  "record_id": "bgd_tw_v2_0990013"
+}

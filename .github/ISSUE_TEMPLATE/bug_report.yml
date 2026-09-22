@@ -1,0 +1,21 @@
+name: Bug or model behavior
+description: Report a reproducible runtime issue or model output.
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Non-sensitive input and reproduction command
+      description: Include the model revision and raw output; remove credentials and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python, torch, transformers, CUDA, hardware and generation limits.

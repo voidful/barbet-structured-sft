@@ -1,0 +1,5544 @@
+{
+  "base_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+  "candidate_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+  "downstream": {
+    "ASR": {
+      "base": {
+        "nll": 1.699449570447649,
+        "nll_examples": 120,
+        "supervised_tokens": 30909,
+        "generation_examples": 48,
+        "parse_ok": {
+          "correct": 0,
+          "n": 48,
+          "rate": 0.0
+        },
+        "canonical_exact": {
+          "correct": 0,
+          "n": 48,
+          "rate": 0.0
+        },
+        "surface_exact": {
+          "correct": 0,
+          "n": 48,
+          "rate": 0.0
+        },
+        "eos": {
+          "correct": 0,
+          "n": 48,
+          "rate": 0.0
+        },
+        "decision_correct": {
+          "correct": 0,
+          "n": 48,
+          "rate": 0.0
+        },
+        "evidence_correct": {
+          "correct": 0,
+          "n": 48,
+          "rate": 0.0
+        }
+      },
+      "candidate": {
+        "nll": 0.002945999705747229,
+        "nll_examples": 120,
+        "supervised_tokens": 30909,
+        "generation_examples": 48,
+        "parse_ok": {
+          "correct": 48,
+          "n": 48,
+          "rate": 1.0
+        },
+        "canonical_exact": {
+          "correct": 27,
+          "n": 48,
+          "rate": 0.5625
+        },
+        "surface_exact": {
+          "correct": 27,
+          "n": 48,
+          "rate": 0.5625
+        },
+        "eos": {
+          "correct": 48,
+          "n": 48,
+          "rate": 1.0
+        },
+        "decision_correct": {
+          "correct": 48,
+          "n": 48,
+          "rate": 1.0
+        },
+        "evidence_correct": {
+          "correct": 48,
+          "n": 48,
+          "rate": 1.0
+        }
+      },
+      "nll_delta": -1.6965035707419018,
+      "canonical_exact_delta": 0.5625,
+      "plan_condition_passed": true
+    },
+    "TTS": {
+      "base": {
+        "nll": 1.6404550357799093,
+        "nll_examples": 80,
+        "supervised_tokens": 23853,
+        "generation_examples": 32,
+        "parse_ok": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "canonical_exact": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "surface_exact": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "eos": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "decision_correct": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "evidence_correct": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        }
+      },
+      "candidate": {
+        "nll": 0.002686886032858586,
+        "nll_examples": 80,
+        "supervised_tokens": 23853,
+        "generation_examples": 32,
+        "parse_ok": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        },
+        "canonical_exact": {
+          "correct": 19,
+          "n": 32,
+          "rate": 0.59375
+        },
+        "surface_exact": {
+          "correct": 19,
+          "n": 32,
+          "rate": 0.59375
+        },
+        "eos": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        },
+        "decision_correct": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        },
+        "evidence_correct": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        }
+      },
+      "nll_delta": -1.6377681497470506,
+      "canonical_exact_delta": 0.59375,
+      "plan_condition_passed": true
+    },
+    "OCR": {
+      "base": {
+        "nll": 1.6231066286261482,
+        "nll_examples": 100,
+        "supervised_tokens": 28581,
+        "generation_examples": 40,
+        "parse_ok": {
+          "correct": 0,
+          "n": 40,
+          "rate": 0.0
+        },
+        "canonical_exact": {
+          "correct": 0,
+          "n": 40,
+          "rate": 0.0
+        },
+        "surface_exact": {
+          "correct": 0,
+          "n": 40,
+          "rate": 0.0
+        },
+        "eos": {
+          "correct": 0,
+          "n": 40,
+          "rate": 0.0
+        },
+        "decision_correct": {
+          "correct": 0,
+          "n": 40,
+          "rate": 0.0
+        },
+        "evidence_correct": {
+          "correct": 0,
+          "n": 40,
+          "rate": 0.0
+        }
+      },
+      "candidate": {
+        "nll": 0.0026110131914693926,
+        "nll_examples": 100,
+        "supervised_tokens": 28581,
+        "generation_examples": 40,
+        "parse_ok": {
+          "correct": 40,
+          "n": 40,
+          "rate": 1.0
+        },
+        "canonical_exact": {
+          "correct": 24,
+          "n": 40,
+          "rate": 0.6
+        },
+        "surface_exact": {
+          "correct": 24,
+          "n": 40,
+          "rate": 0.6
+        },
+        "eos": {
+          "correct": 40,
+          "n": 40,
+          "rate": 1.0
+        },
+        "decision_correct": {
+          "correct": 40,
+          "n": 40,
+          "rate": 1.0
+        },
+        "evidence_correct": {
+          "correct": 40,
+          "n": 40,
+          "rate": 1.0
+        }
+      },
+      "nll_delta": -1.6204956154346788,
+      "canonical_exact_delta": 0.6,
+      "plan_condition_passed": true
+    },
+    "MT": {
+      "base": {
+        "nll": 1.5686025967876052,
+        "nll_examples": 80,
+        "supervised_tokens": 25223,
+        "generation_examples": 32,
+        "parse_ok": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "canonical_exact": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "surface_exact": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "eos": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "decision_correct": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        },
+        "evidence_correct": {
+          "correct": 0,
+          "n": 32,
+          "rate": 0.0
+        }
+      },
+      "candidate": {
+        "nll": 0.0023588463345589296,
+        "nll_examples": 80,
+        "supervised_tokens": 25223,
+        "generation_examples": 32,
+        "parse_ok": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        },
+        "canonical_exact": {
+          "correct": 13,
+          "n": 32,
+          "rate": 0.40625
+        },
+        "surface_exact": {
+          "correct": 13,
+          "n": 32,
+          "rate": 0.40625
+        },
+        "eos": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        },
+        "decision_correct": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        },
+        "evidence_correct": {
+          "correct": 32,
+          "n": 32,
+          "rate": 1.0
+        }
+      },
+      "nll_delta": -1.5662437504530462,
+      "canonical_exact_delta": 0.40625,
+      "plan_condition_passed": true
+    }
+  },
+  "overall_base": {
+    "nll": 1.8309244677089134,
+    "nll_examples": 1020,
+    "supervised_tokens": 221453,
+    "generation_examples": 408,
+    "parse_ok": {
+      "correct": 0,
+      "n": 408,
+      "rate": 0.0
+    },
+    "canonical_exact": {
+      "correct": 0,
+      "n": 408,
+      "rate": 0.0
+    },
+    "surface_exact": {
+      "correct": 0,
+      "n": 408,
+      "rate": 0.0
+    },
+    "eos": {
+      "correct": 1,
+      "n": 408,
+      "rate": 0.0024509803921568627
+    },
+    "decision_correct": {
+      "correct": 0,
+      "n": 408,
+      "rate": 0.0
+    },
+    "evidence_correct": {
+      "correct": 0,
+      "n": 408,
+      "rate": 0.0
+    }
+  },
+  "overall_candidate": {
+    "nll": 0.0033564768346141314,
+    "nll_examples": 1020,
+    "supervised_tokens": 221453,
+    "generation_examples": 408,
+    "parse_ok": {
+      "correct": 408,
+      "n": 408,
+      "rate": 1.0
+    },
+    "canonical_exact": {
+      "correct": 214,
+      "n": 408,
+      "rate": 0.5245098039215687
+    },
+    "surface_exact": {
+      "correct": 214,
+      "n": 408,
+      "rate": 0.5245098039215687
+    },
+    "eos": {
+      "correct": 408,
+      "n": 408,
+      "rate": 1.0
+    },
+    "decision_correct": {
+      "correct": 408,
+      "n": 408,
+      "rate": 1.0
+    },
+    "evidence_correct": {
+      "correct": 408,
+      "n": 408,
+      "rate": 1.0
+    }
+  },
+  "full_base_metrics": {
+    "domain:ASR": {
+      "nll": 1.699449570447649,
+      "nll_examples": 120,
+      "supervised_tokens": 30909,
+      "generation_examples": 48,
+      "parse_ok": {
+        "correct": 0,
+        "n": 48,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 48,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 48,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 48,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 48,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 48,
+        "rate": 0.0
+      }
+    },
+    "domain:MT": {
+      "nll": 1.5686025967876052,
+      "nll_examples": 80,
+      "supervised_tokens": 25223,
+      "generation_examples": 32,
+      "parse_ok": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      }
+    },
+    "domain:OCR": {
+      "nll": 1.6231066286261482,
+      "nll_examples": 100,
+      "supervised_tokens": 28581,
+      "generation_examples": 40,
+      "parse_ok": {
+        "correct": 0,
+        "n": 40,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 40,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 40,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 40,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 40,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 40,
+        "rate": 0.0
+      }
+    },
+    "domain:TTS": {
+      "nll": 1.6404550357799093,
+      "nll_examples": 80,
+      "supervised_tokens": 23853,
+      "generation_examples": 32,
+      "parse_ok": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 32,
+        "rate": 0.0
+      }
+    },
+    "domain:other": {
+      "nll": 2.0183969948229623,
+      "nll_examples": 640,
+      "supervised_tokens": 112887,
+      "generation_examples": 256,
+      "parse_ok": {
+        "correct": 0,
+        "n": 256,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 256,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 256,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 1,
+        "n": 256,
+        "rate": 0.00390625
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 256,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 256,
+        "rate": 0.0
+      }
+    },
+    "family:ASR_CORRECTION": {
+      "nll": 1.982159981121779,
+      "nll_examples": 20,
+      "supervised_tokens": 5793,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:ASR_NBEST_RANKING": {
+      "nll": 1.2298550301726205,
+      "nll_examples": 20,
+      "supervised_tokens": 8657,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:ASR_QUALITY": {
+      "nll": 2.76654410158601,
+      "nll_examples": 20,
+      "supervised_tokens": 3044,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:ASR_VERBATIM": {
+      "nll": 1.6076143130897662,
+      "nll_examples": 20,
+      "supervised_tokens": 4390,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:BASE_CAPABILITY_REPLAY": {
+      "nll": 1.7314309618304797,
+      "nll_examples": 20,
+      "supervised_tokens": 4166,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:DOCUMENT_TYPE_CLASSIFICATION": {
+      "nll": 3.0358336925506593,
+      "nll_examples": 20,
+      "supervised_tokens": 1840,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:DOCUMENT_VERSION_MATCH": {
+      "nll": 2.1432556891226553,
+      "nll_examples": 20,
+      "supervised_tokens": 3108,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:DOMAIN_CLASSIFICATION": {
+      "nll": 2.7558701870666904,
+      "nll_examples": 20,
+      "supervised_tokens": 1988,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:EMOTION_CLASSIFICATION": {
+      "nll": 2.6463517165279966,
+      "nll_examples": 20,
+      "supervised_tokens": 1988,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:ENTITY_RESOLUTION": {
+      "nll": 2.1720853103594084,
+      "nll_examples": 20,
+      "supervised_tokens": 2974,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:EVENT_EXTRACTION": {
+      "nll": 1.3162088575666593,
+      "nll_examples": 20,
+      "supervised_tokens": 5123,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:FAITHFUL_OCR": {
+      "nll": 1.7181540047840944,
+      "nll_examples": 20,
+      "supervised_tokens": 4193,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:FORMAT_PRESERVATION": {
+      "nll": 1.7841661712042773,
+      "nll_examples": 20,
+      "supervised_tokens": 3826,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:FORM_EXTRACTION": {
+      "nll": 1.355171093720812,
+      "nll_examples": 20,
+      "supervised_tokens": 5182,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:HUMAN_ESCALATION": {
+      "nll": 2.8686962393425515,
+      "nll_examples": 20,
+      "supervised_tokens": 2871,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:INTENT_CLASSIFICATION": {
+      "nll": 2.64813592153437,
+      "nll_examples": 20,
+      "supervised_tokens": 2210,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:LEDGER_FIELD_EXTRACTION": {
+      "nll": 1.5959919556080957,
+      "nll_examples": 20,
+      "supervised_tokens": 4415,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:LEDGER_UPDATE": {
+      "nll": 2.314927018528034,
+      "nll_examples": 20,
+      "supervised_tokens": 3068,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:LONG_CONTEXT_ACTIVE_VALUE": {
+      "nll": 1.5971605793010448,
+      "nll_examples": 20,
+      "supervised_tokens": 4606,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:LONG_CONTEXT_CONTRADICTION": {
+      "nll": 2.2566857763531174,
+      "nll_examples": 20,
+      "supervised_tokens": 4056,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:LONG_CONTEXT_EVIDENCE_LINKING": {
+      "nll": 2.6556993470403363,
+      "nll_examples": 20,
+      "supervised_tokens": 2639,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:LONG_CONTEXT_LEDGER_UPDATE": {
+      "nll": 2.4476039522282025,
+      "nll_examples": 20,
+      "supervised_tokens": 3196,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:MODALITY_ROUTING": {
+      "nll": 2.737150464604866,
+      "nll_examples": 20,
+      "supervised_tokens": 2537,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:MT_CANDIDATE_RANKING": {
+      "nll": 1.2426850051688794,
+      "nll_examples": 20,
+      "supervised_tokens": 8634,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:MT_POST_EDIT": {
+      "nll": 2.0106346454965554,
+      "nll_examples": 20,
+      "supervised_tokens": 5857,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:MT_QUALITY": {
+      "nll": 2.7068651810081135,
+      "nll_examples": 20,
+      "supervised_tokens": 3091,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:NAMED_ENTITY_EXTRACTION": {
+      "nll": 1.4261772396847285,
+      "nll_examples": 20,
+      "supervised_tokens": 4738,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:OCR_CANDIDATE_RANKING": {
+      "nll": 1.2008181622153835,
+      "nll_examples": 20,
+      "supervised_tokens": 8816,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:OCR_CORRECTION": {
+      "nll": 2.3016731063141824,
+      "nll_examples": 20,
+      "supervised_tokens": 5083,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:OCR_QUALITY": {
+      "nll": 2.742985177178479,
+      "nll_examples": 20,
+      "supervised_tokens": 2929,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:OCR_REGION_ALIGNMENT": {
+      "nll": 1.1727208874686055,
+      "nll_examples": 20,
+      "supervised_tokens": 7560,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:PSEUDO_AUDIO_GROUNDING": {
+      "nll": 2.5294370840775486,
+      "nll_examples": 20,
+      "supervised_tokens": 2692,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:PSEUDO_IMAGE_GROUNDING": {
+      "nll": 2.4034364268263677,
+      "nll_examples": 20,
+      "supervised_tokens": 2795,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:RETRIEVAL_RANKING": {
+      "nll": 1.2112727407355208,
+      "nll_examples": 20,
+      "supervised_tokens": 8601,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:RISK_CONTROL": {
+      "nll": 2.7912243023290215,
+      "nll_examples": 20,
+      "supervised_tokens": 2721,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:SHARED_INSPECTOR": {
+      "nll": 2.830377291714456,
+      "nll_examples": 20,
+      "supervised_tokens": 2855,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:SOURCE_TARGET_ALIGNMENT": {
+      "nll": 1.1375884793844075,
+      "nll_examples": 20,
+      "supervised_tokens": 7641,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:SPEAKER_MATCHING": {
+      "nll": 2.07533872242961,
+      "nll_examples": 20,
+      "supervised_tokens": 2995,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:SPEECH_TEXT_ALIGNMENT": {
+      "nll": 1.310789043350341,
+      "nll_examples": 20,
+      "supervised_tokens": 6911,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TABLE_EXTRACTION": {
+      "nll": 1.1699685766849905,
+      "nll_examples": 20,
+      "supervised_tokens": 5751,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TABLE_GROUNDING": {
+      "nll": 2.5994515903708484,
+      "nll_examples": 20,
+      "supervised_tokens": 2607,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TERMINOLOGY_MATCH": {
+      "nll": 2.105573443366763,
+      "nll_examples": 20,
+      "supervised_tokens": 3005,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TERMINOLOGY_REPLAY": {
+      "nll": 1.5962048019018784,
+      "nll_examples": 20,
+      "supervised_tokens": 4573,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 1,
+        "n": 8,
+        "rate": 0.125
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TEXT_DENOISING": {
+      "nll": 2.2009446906087993,
+      "nll_examples": 20,
+      "supervised_tokens": 4791,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TEXT_GROUNDING": {
+      "nll": 2.6269110268013556,
+      "nll_examples": 20,
+      "supervised_tokens": 2588,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TOOL_ROUTING": {
+      "nll": 2.9425430874380116,
+      "nll_examples": 20,
+      "supervised_tokens": 2382,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TRANSCRIPTION_MODE": {
+      "nll": 2.772530202382899,
+      "nll_examples": 20,
+      "supervised_tokens": 2114,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TTS_CONTENT_QUALITY": {
+      "nll": 2.7529308432817867,
+      "nll_examples": 20,
+      "supervised_tokens": 2935,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TTS_PLAN_RANKING": {
+      "nll": 1.1905408741034675,
+      "nll_examples": 20,
+      "supervised_tokens": 8781,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:TTS_SPOKEN_FORM": {
+      "nll": 2.1380793987501896,
+      "nll_examples": 20,
+      "supervised_tokens": 5352,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "family:WRITTEN_SPOKEN_ALIGNMENT": {
+      "nll": 1.3489729676952937,
+      "nll_examples": 20,
+      "supervised_tokens": 6785,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 8,
+        "rate": 0.0
+      }
+    },
+    "overall": {
+      "nll": 1.8309244677089134,
+      "nll_examples": 1020,
+      "supervised_tokens": 221453,
+      "generation_examples": 408,
+      "parse_ok": {
+        "correct": 0,
+        "n": 408,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 408,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 408,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 1,
+        "n": 408,
+        "rate": 0.0024509803921568627
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 408,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 408,
+        "rate": 0.0
+      }
+    },
+    "serializer:COMPACT_TAGS": {
+      "nll": 1.6872800116486533,
+      "nll_examples": 215,
+      "supervised_tokens": 53893,
+      "generation_examples": 98,
+      "parse_ok": {
+        "correct": 0,
+        "n": 98,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 98,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 98,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 1,
+        "n": 98,
+        "rate": 0.01020408163265306
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 98,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 98,
+        "rate": 0.0
+      }
+    },
+    "serializer:FUNCTION_CALL": {
+      "nll": 1.793238422437377,
+      "nll_examples": 292,
+      "supervised_tokens": 60488,
+      "generation_examples": 117,
+      "parse_ok": {
+        "correct": 0,
+        "n": 117,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 117,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 117,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 117,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 117,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 117,
+        "rate": 0.0
+      }
+    },
+    "serializer:JSON": {
+      "nll": 1.9125825079026875,
+      "nll_examples": 251,
+      "supervised_tokens": 53802,
+      "generation_examples": 88,
+      "parse_ok": {
+        "correct": 0,
+        "n": 88,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 88,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 88,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 88,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 88,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 88,
+        "rate": 0.0
+      }
+    },
+    "serializer:KEY_VALUE": {
+      "nll": 1.9365677622149178,
+      "nll_examples": 262,
+      "supervised_tokens": 53270,
+      "generation_examples": 105,
+      "parse_ok": {
+        "correct": 0,
+        "n": 105,
+        "rate": 0.0
+      },
+      "canonical_exact": {
+        "correct": 0,
+        "n": 105,
+        "rate": 0.0
+      },
+      "surface_exact": {
+        "correct": 0,
+        "n": 105,
+        "rate": 0.0
+      },
+      "eos": {
+        "correct": 0,
+        "n": 105,
+        "rate": 0.0
+      },
+      "decision_correct": {
+        "correct": 0,
+        "n": 105,
+        "rate": 0.0
+      },
+      "evidence_correct": {
+        "correct": 0,
+        "n": 105,
+        "rate": 0.0
+      }
+    }
+  },
+  "full_candidate_metrics": {
+    "domain:ASR": {
+      "nll": 0.002945999705747229,
+      "nll_examples": 120,
+      "supervised_tokens": 30909,
+      "generation_examples": 48,
+      "parse_ok": {
+        "correct": 48,
+        "n": 48,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 27,
+        "n": 48,
+        "rate": 0.5625
+      },
+      "surface_exact": {
+        "correct": 27,
+        "n": 48,
+        "rate": 0.5625
+      },
+      "eos": {
+        "correct": 48,
+        "n": 48,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 48,
+        "n": 48,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 48,
+        "n": 48,
+        "rate": 1.0
+      }
+    },
+    "domain:MT": {
+      "nll": 0.0023588463345589296,
+      "nll_examples": 80,
+      "supervised_tokens": 25223,
+      "generation_examples": 32,
+      "parse_ok": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 13,
+        "n": 32,
+        "rate": 0.40625
+      },
+      "surface_exact": {
+        "correct": 13,
+        "n": 32,
+        "rate": 0.40625
+      },
+      "eos": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      }
+    },
+    "domain:OCR": {
+      "nll": 0.0026110131914693926,
+      "nll_examples": 100,
+      "supervised_tokens": 28581,
+      "generation_examples": 40,
+      "parse_ok": {
+        "correct": 40,
+        "n": 40,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 24,
+        "n": 40,
+        "rate": 0.6
+      },
+      "surface_exact": {
+        "correct": 24,
+        "n": 40,
+        "rate": 0.6
+      },
+      "eos": {
+        "correct": 40,
+        "n": 40,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 40,
+        "n": 40,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 40,
+        "n": 40,
+        "rate": 1.0
+      }
+    },
+    "domain:TTS": {
+      "nll": 0.002686886032858586,
+      "nll_examples": 80,
+      "supervised_tokens": 23853,
+      "generation_examples": 32,
+      "parse_ok": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 19,
+        "n": 32,
+        "rate": 0.59375
+      },
+      "surface_exact": {
+        "correct": 19,
+        "n": 32,
+        "rate": 0.59375
+      },
+      "eos": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 32,
+        "n": 32,
+        "rate": 1.0
+      }
+    },
+    "domain:other": {
+      "nll": 0.004021996491067348,
+      "nll_examples": 640,
+      "supervised_tokens": 112887,
+      "generation_examples": 256,
+      "parse_ok": {
+        "correct": 256,
+        "n": 256,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 131,
+        "n": 256,
+        "rate": 0.51171875
+      },
+      "surface_exact": {
+        "correct": 131,
+        "n": 256,
+        "rate": 0.51171875
+      },
+      "eos": {
+        "correct": 256,
+        "n": 256,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 256,
+        "n": 256,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 256,
+        "n": 256,
+        "rate": 1.0
+      }
+    },
+    "family:ASR_CORRECTION": {
+      "nll": 0.002368357061274541,
+      "nll_examples": 20,
+      "supervised_tokens": 5793,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:ASR_NBEST_RANKING": {
+      "nll": 0.0016084754831955116,
+      "nll_examples": 20,
+      "supervised_tokens": 8657,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:ASR_QUALITY": {
+      "nll": 0.007003768277905255,
+      "nll_examples": 20,
+      "supervised_tokens": 3044,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:ASR_VERBATIM": {
+      "nll": 0.0031377765560068683,
+      "nll_examples": 20,
+      "supervised_tokens": 4390,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:BASE_CAPABILITY_REPLAY": {
+      "nll": 0.003231075755197535,
+      "nll_examples": 20,
+      "supervised_tokens": 4166,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:DOCUMENT_TYPE_CLASSIFICATION": {
+      "nll": 0.007330253697000444,
+      "nll_examples": 20,
+      "supervised_tokens": 1840,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:DOCUMENT_VERSION_MATCH": {
+      "nll": 0.004532892349418229,
+      "nll_examples": 20,
+      "supervised_tokens": 3108,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:DOMAIN_CLASSIFICATION": {
+      "nll": 0.00691009089406917,
+      "nll_examples": 20,
+      "supervised_tokens": 1988,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:EMOTION_CLASSIFICATION": {
+      "nll": 0.007258348674532139,
+      "nll_examples": 20,
+      "supervised_tokens": 1988,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:ENTITY_RESOLUTION": {
+      "nll": 0.004633506166259555,
+      "nll_examples": 20,
+      "supervised_tokens": 2974,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:EVENT_EXTRACTION": {
+      "nll": 0.0026963713374181567,
+      "nll_examples": 20,
+      "supervised_tokens": 5123,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:FAITHFUL_OCR": {
+      "nll": 0.003376399914183446,
+      "nll_examples": 20,
+      "supervised_tokens": 4193,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:FORMAT_PRESERVATION": {
+      "nll": 0.003764152124057238,
+      "nll_examples": 20,
+      "supervised_tokens": 3826,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:FORM_EXTRACTION": {
+      "nll": 0.0026675415171769678,
+      "nll_examples": 20,
+      "supervised_tokens": 5182,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 2,
+        "n": 8,
+        "rate": 0.25
+      },
+      "surface_exact": {
+        "correct": 2,
+        "n": 8,
+        "rate": 0.25
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:HUMAN_ESCALATION": {
+      "nll": 0.004736503627208344,
+      "nll_examples": 20,
+      "supervised_tokens": 2871,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:INTENT_CLASSIFICATION": {
+      "nll": 0.006226688395865362,
+      "nll_examples": 20,
+      "supervised_tokens": 2210,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 2,
+        "n": 8,
+        "rate": 0.25
+      },
+      "surface_exact": {
+        "correct": 2,
+        "n": 8,
+        "rate": 0.25
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:LEDGER_FIELD_EXTRACTION": {
+      "nll": 0.003172617160956695,
+      "nll_examples": 20,
+      "supervised_tokens": 4415,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 7,
+        "n": 8,
+        "rate": 0.875
+      },
+      "surface_exact": {
+        "correct": 7,
+        "n": 8,
+        "rate": 0.875
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:LEDGER_UPDATE": {
+      "nll": 0.004614833711265226,
+      "nll_examples": 20,
+      "supervised_tokens": 3068,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:LONG_CONTEXT_ACTIVE_VALUE": {
+      "nll": 0.0030014373431721465,
+      "nll_examples": 20,
+      "supervised_tokens": 4606,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:LONG_CONTEXT_CONTRADICTION": {
+      "nll": 0.0035045730420553605,
+      "nll_examples": 20,
+      "supervised_tokens": 4056,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:LONG_CONTEXT_EVIDENCE_LINKING": {
+      "nll": 0.005234255986736382,
+      "nll_examples": 20,
+      "supervised_tokens": 2639,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:LONG_CONTEXT_LEDGER_UPDATE": {
+      "nll": 0.00438527134800789,
+      "nll_examples": 20,
+      "supervised_tokens": 3196,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:MODALITY_ROUTING": {
+      "nll": 0.005652517865158274,
+      "nll_examples": 20,
+      "supervised_tokens": 2537,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 1,
+        "n": 8,
+        "rate": 0.125
+      },
+      "surface_exact": {
+        "correct": 1,
+        "n": 8,
+        "rate": 0.125
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:MT_CANDIDATE_RANKING": {
+      "nll": 0.0016737482089826305,
+      "nll_examples": 20,
+      "supervised_tokens": 8634,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:MT_POST_EDIT": {
+      "nll": 0.0023651513667684635,
+      "nll_examples": 20,
+      "supervised_tokens": 5857,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:MT_QUALITY": {
+      "nll": 0.005639578907942476,
+      "nll_examples": 20,
+      "supervised_tokens": 3091,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:NAMED_ENTITY_EXTRACTION": {
+      "nll": 0.0029691201717262153,
+      "nll_examples": 20,
+      "supervised_tokens": 4738,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:OCR_CANDIDATE_RANKING": {
+      "nll": 0.0016966049618361528,
+      "nll_examples": 20,
+      "supervised_tokens": 8816,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:OCR_CORRECTION": {
+      "nll": 0.0027118278625647505,
+      "nll_examples": 20,
+      "supervised_tokens": 5083,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:OCR_QUALITY": {
+      "nll": 0.006047015942756523,
+      "nll_examples": 20,
+      "supervised_tokens": 2929,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:OCR_REGION_ALIGNMENT": {
+      "nll": 0.0018538258095128985,
+      "nll_examples": 20,
+      "supervised_tokens": 7560,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:PSEUDO_AUDIO_GROUNDING": {
+      "nll": 0.005069231533170035,
+      "nll_examples": 20,
+      "supervised_tokens": 2692,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:PSEUDO_IMAGE_GROUNDING": {
+      "nll": 0.005126629099882939,
+      "nll_examples": 20,
+      "supervised_tokens": 2795,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:RETRIEVAL_RANKING": {
+      "nll": 0.0019360614514899615,
+      "nll_examples": 20,
+      "supervised_tokens": 8601,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 1,
+        "n": 8,
+        "rate": 0.125
+      },
+      "surface_exact": {
+        "correct": 1,
+        "n": 8,
+        "rate": 0.125
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:RISK_CONTROL": {
+      "nll": 0.00504900301202176,
+      "nll_examples": 20,
+      "supervised_tokens": 2721,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:SHARED_INSPECTOR": {
+      "nll": 0.006815882178754162,
+      "nll_examples": 20,
+      "supervised_tokens": 2855,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:SOURCE_TARGET_ALIGNMENT": {
+      "nll": 0.001800995825233708,
+      "nll_examples": 20,
+      "supervised_tokens": 7641,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:SPEAKER_MATCHING": {
+      "nll": 0.004598395395961797,
+      "nll_examples": 20,
+      "supervised_tokens": 2995,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:SPEECH_TEXT_ALIGNMENT": {
+      "nll": 0.002001198199509576,
+      "nll_examples": 20,
+      "supervised_tokens": 6911,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TABLE_EXTRACTION": {
+      "nll": 0.002391648662001752,
+      "nll_examples": 20,
+      "supervised_tokens": 5751,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TABLE_GROUNDING": {
+      "nll": 0.005231359332841351,
+      "nll_examples": 20,
+      "supervised_tokens": 2607,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TERMINOLOGY_MATCH": {
+      "nll": 0.004607296656172555,
+      "nll_examples": 20,
+      "supervised_tokens": 3005,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TERMINOLOGY_REPLAY": {
+      "nll": 0.0031776537984510218,
+      "nll_examples": 20,
+      "supervised_tokens": 4573,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TEXT_DENOISING": {
+      "nll": 0.002919937655807126,
+      "nll_examples": 20,
+      "supervised_tokens": 4791,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TEXT_GROUNDING": {
+      "nll": 0.005313138244133817,
+      "nll_examples": 20,
+      "supervised_tokens": 2588,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TOOL_ROUTING": {
+      "nll": 0.005920507579159827,
+      "nll_examples": 20,
+      "supervised_tokens": 2382,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TRANSCRIPTION_MODE": {
+      "nll": 0.006853760508670628,
+      "nll_examples": 20,
+      "supervised_tokens": 2114,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "surface_exact": {
+        "correct": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TTS_CONTENT_QUALITY": {
+      "nll": 0.007428153715964274,
+      "nll_examples": 20,
+      "supervised_tokens": 2935,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TTS_PLAN_RANKING": {
+      "nll": 0.0016120361232648155,
+      "nll_examples": 20,
+      "supervised_tokens": 8781,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "surface_exact": {
+        "correct": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:TTS_SPOKEN_FORM": {
+      "nll": 0.002635668042138141,
+      "nll_examples": 20,
+      "supervised_tokens": 5352,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "surface_exact": {
+        "correct": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "family:WRITTEN_SPOKEN_ALIGNMENT": {
+      "nll": 0.00206739525799691,
+      "nll_examples": 20,
+      "supervised_tokens": 6785,
+      "generation_examples": 8,
+      "parse_ok": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "surface_exact": {
+        "correct": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "eos": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    },
+    "overall": {
+      "nll": 0.0033564768346141314,
+      "nll_examples": 1020,
+      "supervised_tokens": 221453,
+      "generation_examples": 408,
+      "parse_ok": {
+        "correct": 408,
+        "n": 408,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 214,
+        "n": 408,
+        "rate": 0.5245098039215687
+      },
+      "surface_exact": {
+        "correct": 214,
+        "n": 408,
+        "rate": 0.5245098039215687
+      },
+      "eos": {
+        "correct": 408,
+        "n": 408,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 408,
+        "n": 408,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 408,
+        "n": 408,
+        "rate": 1.0
+      }
+    },
+    "serializer:COMPACT_TAGS": {
+      "nll": 0.002804958241751977,
+      "nll_examples": 215,
+      "supervised_tokens": 53893,
+      "generation_examples": 98,
+      "parse_ok": {
+        "correct": 98,
+        "n": 98,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 48,
+        "n": 98,
+        "rate": 0.4897959183673469
+      },
+      "surface_exact": {
+        "correct": 48,
+        "n": 98,
+        "rate": 0.4897959183673469
+      },
+      "eos": {
+        "correct": 98,
+        "n": 98,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 98,
+        "n": 98,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 98,
+        "n": 98,
+        "rate": 1.0
+      }
+    },
+    "serializer:FUNCTION_CALL": {
+      "nll": 0.003466172262324312,
+      "nll_examples": 292,
+      "supervised_tokens": 60488,
+      "generation_examples": 117,
+      "parse_ok": {
+        "correct": 117,
+        "n": 117,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 69,
+        "n": 117,
+        "rate": 0.5897435897435898
+      },
+      "surface_exact": {
+        "correct": 69,
+        "n": 117,
+        "rate": 0.5897435897435898
+      },
+      "eos": {
+        "correct": 117,
+        "n": 117,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 117,
+        "n": 117,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 117,
+        "n": 117,
+        "rate": 1.0
+      }
+    },
+    "serializer:JSON": {
+      "nll": 0.003659719217322814,
+      "nll_examples": 251,
+      "supervised_tokens": 53802,
+      "generation_examples": 88,
+      "parse_ok": {
+        "correct": 88,
+        "n": 88,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 43,
+        "n": 88,
+        "rate": 0.48863636363636365
+      },
+      "surface_exact": {
+        "correct": 43,
+        "n": 88,
+        "rate": 0.48863636363636365
+      },
+      "eos": {
+        "correct": 88,
+        "n": 88,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 88,
+        "n": 88,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 88,
+        "n": 88,
+        "rate": 1.0
+      }
+    },
+    "serializer:KEY_VALUE": {
+      "nll": 0.0034836157086388015,
+      "nll_examples": 262,
+      "supervised_tokens": 53270,
+      "generation_examples": 105,
+      "parse_ok": {
+        "correct": 105,
+        "n": 105,
+        "rate": 1.0
+      },
+      "canonical_exact": {
+        "correct": 54,
+        "n": 105,
+        "rate": 0.5142857142857142
+      },
+      "surface_exact": {
+        "correct": 54,
+        "n": 105,
+        "rate": 0.5142857142857142
+      },
+      "eos": {
+        "correct": 105,
+        "n": 105,
+        "rate": 1.0
+      },
+      "decision_correct": {
+        "correct": 105,
+        "n": 105,
+        "rate": 1.0
+      },
+      "evidence_correct": {
+        "correct": 105,
+        "n": 105,
+        "rate": 1.0
+      }
+    }
+  },
+  "synthetic_test_plan_conditions_passed": true,
+  "parse_rate_threshold": 0.95,
+  "retention": {
+    "zh_tw_zh": {
+      "base": {
+        "rows": 535,
+        "nll_sum": 1537674.3790444136,
+        "tokens": 500126,
+        "utf8_bytes": 1946122,
+        "bits_per_byte": 1.1399055152500162,
+        "nll": 3.0745739654495337
+      },
+      "candidate": {
+        "rows": 535,
+        "nll_sum": 1585772.5358407497,
+        "tokens": 500126,
+        "utf8_bytes": 1946122,
+        "bits_per_byte": 1.1755615390172691,
+        "nll": 3.1707460436784927
+      },
+      "relative_bpb_change": 0.03127980634380245
+    },
+    "math": {
+      "base": {
+        "rows": 408,
+        "nll_sum": 509480.2617728114,
+        "tokens": 500837,
+        "utf8_bytes": 1066832,
+        "bits_per_byte": 0.6889788149309788,
+        "nll": 1.0172576342658617
+      },
+      "candidate": {
+        "rows": 408,
+        "nll_sum": 592068.1504936516,
+        "tokens": 500837,
+        "utf8_bytes": 1066832,
+        "bits_per_byte": 0.8006638201567742,
+        "nll": 1.1821573695506755
+      },
+      "relative_bpb_change": 0.16210223421308512
+    },
+    "ja_ko": {
+      "base": {
+        "rows": 1042,
+        "nll_sum": 1493726.2078552246,
+        "tokens": 499446,
+        "utf8_bytes": 2226269,
+        "bits_per_byte": 0.9679833804983178,
+        "nll": 2.9907661846430336
+      },
+      "candidate": {
+        "rows": 1042,
+        "nll_sum": 1517355.0300375223,
+        "tokens": 499446,
+        "utf8_bytes": 2226269,
+        "bits_per_byte": 0.9832956291908379,
+        "nll": 3.0380762485584474
+      },
+      "relative_bpb_change": 0.01581871032190385
+    },
+    "english_general": {
+      "base": {
+        "rows": 1625,
+        "nll_sum": 861744.752308011,
+        "tokens": 499832,
+        "utf8_bytes": 1443050,
+        "bits_per_byte": 0.8615327817240259,
+        "nll": 1.7240687917300435
+      },
+      "candidate": {
+        "rows": 1625,
+        "nll_sum": 872927.3822007775,
+        "tokens": 499832,
+        "utf8_bytes": 1443050,
+        "bits_per_byte": 0.8727126609315315,
+        "nll": 1.7464415687686614
+      },
+      "relative_bpb_change": 0.012976731059650914
+    },
+    "code": {
+      "base": {
+        "rows": 1726,
+        "nll_sum": 596559.1011392176,
+        "tokens": 499990,
+        "utf8_bytes": 1203044,
+        "bits_per_byte": 0.7153959928404339,
+        "nll": 1.1931420651197375
+      },
+      "candidate": {
+        "rows": 1726,
+        "nll_sum": 759753.2293854952,
+        "tokens": 499990,
+        "utf8_bytes": 1203044,
+        "bits_per_byte": 0.9110990257495395,
+        "nll": 1.5195368495079806
+      },
+      "relative_bpb_change": 0.27355902866058734
+    },
+    "multilingual": {
+      "base": {
+        "rows": 1619,
+        "nll_sum": 1118394.9079485536,
+        "tokens": 499848,
+        "utf8_bytes": 1418627,
+        "bits_per_byte": 1.1373692925997088,
+        "nll": 2.237470006779168
+      },
+      "candidate": {
+        "rows": 1619,
+        "nll_sum": 1148456.812075138,
+        "tokens": 499848,
+        "utf8_bytes": 1418627,
+        "bits_per_byte": 1.1679412188376155,
+        "nll": 2.2976120982281376
+      },
+      "relative_bpb_change": 0.026879507330488828
+    }
+  },
+  "fresh_probes": {
+    "base": {
+      "overall": {
+        "exact": 0,
+        "n": 16
+      },
+      "ASR": {
+        "exact": 0,
+        "n": 4
+      },
+      "OCR": {
+        "exact": 0,
+        "n": 4
+      },
+      "TTS": {
+        "exact": 0,
+        "n": 4
+      },
+      "MT": {
+        "exact": 0,
+        "n": 4
+      }
+    },
+    "candidate": {
+      "overall": {
+        "exact": 0,
+        "n": 16
+      },
+      "ASR": {
+        "exact": 0,
+        "n": 4
+      },
+      "OCR": {
+        "exact": 0,
+        "n": 4
+      },
+      "TTS": {
+        "exact": 0,
+        "n": 4
+      },
+      "MT": {
+        "exact": 0,
+        "n": 4
+      }
+    }
+  },
+  "published": false,
+  "next_action": "Inspect raw generation failures, fresh-probe alternatives, retention deltas and long-context results; then complete card, packaging and HF verification",
+  "long_probe": {
+    "summary": {
+      "base": {
+        "8192": {
+          "exact": 0,
+          "n": 4,
+          "mean_answer_nll": 0.5360105745494366
+        },
+        "131072": {
+          "exact": 0,
+          "n": 4,
+          "mean_answer_nll": 2.7736809849739075
+        }
+      },
+      "candidate": {
+        "8192": {
+          "exact": 0,
+          "n": 4,
+          "mean_answer_nll": 0.004563791693726671
+        },
+        "131072": {
+          "exact": 0,
+          "n": 4,
+          "mean_answer_nll": 2.182063838467002
+        }
+      }
+    },
+    "model_sha256": {
+      "base": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+      "candidate": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d"
+    },
+    "plan": {
+      "cases": [
+        {
+          "id": "8192-0",
+          "length": 8192,
+          "requested_position": 0.05,
+          "evidence_start_token": 426,
+          "evidence_position": 0.052001953125,
+          "expected": "AX-3971-K",
+          "answer_ids": [
+            25295,
+            45,
+            1886,
+            3365,
+            45,
+            75
+          ],
+          "input_sha256": "6a70ad60fcebe7859608619f42a8926157f8a7dbc3cce063b9c3d3fb878d9cda"
+        },
+        {
+          "id": "8192-1",
+          "length": 8192,
+          "requested_position": 0.33,
+          "evidence_start_token": 2706,
+          "evidence_position": 0.330322265625,
+          "expected": "BZ-6428-P",
+          "answer_ids": [
+            66,
+            90,
+            45,
+            2501,
+            1009,
+            45,
+            80
+          ],
+          "input_sha256": "ada7459423f32a42f17aefb80e14f5ed5e175de36d609adcbc1d5672cef6dfd0"
+        },
+        {
+          "id": "8192-2",
+          "length": 8192,
+          "requested_position": 0.67,
+          "evidence_start_token": 5466,
+          "evidence_position": 0.667236328125,
+          "expected": "CT-1853-R",
+          "answer_ids": [
+            7849,
+            45,
+            58181,
+            45,
+            82
+          ],
+          "input_sha256": "200882032ab001c7731da90a2d1f90b12ac6d65e3ca5042d12f6f72f78365d6c"
+        },
+        {
+          "id": "8192-3",
+          "length": 8192,
+          "requested_position": 0.95,
+          "evidence_start_token": 7746,
+          "evidence_position": 0.945556640625,
+          "expected": "DU-7264-M",
+          "answer_ids": [
+            22612,
+            45,
+            55,
+            15119,
+            45,
+            77
+          ],
+          "input_sha256": "1c6d702aeb32b0876b40824f6c61c9fef0f91b5c8f286d6ddcb4b2a090a4f7de"
+        },
+        {
+          "id": "131072-0",
+          "length": 131072,
+          "requested_position": 0.05,
+          "evidence_start_token": 6566,
+          "evidence_position": 0.0500946044921875,
+          "expected": "AX-3971-K",
+          "answer_ids": [
+            25295,
+            45,
+            1886,
+            3365,
+            45,
+            75
+          ],
+          "input_sha256": "11f3319a3728b54995e42e8718b617747bec0fed5e5689603f5ed901e5e00ddd"
+        },
+        {
+          "id": "131072-1",
+          "length": 131072,
+          "requested_position": 0.33,
+          "evidence_start_token": 43246,
+          "evidence_position": 0.3299407958984375,
+          "expected": "BZ-6428-P",
+          "answer_ids": [
+            66,
+            90,
+            45,
+            2501,
+            1009,
+            45,
+            80
+          ],
+          "input_sha256": "004ec5e963856a48c128773f0fa05636e058782574f0aa2dacfef4a883d5ab36"
+        },
+        {
+          "id": "131072-2",
+          "length": 131072,
+          "requested_position": 0.67,
+          "evidence_start_token": 87806,
+          "evidence_position": 0.6699066162109375,
+          "expected": "CT-1853-R",
+          "answer_ids": [
+            7849,
+            45,
+            58181,
+            45,
+            82
+          ],
+          "input_sha256": "7d8ae8140544ea492477e5993f5dd7d7006d30f1bac9852bdf7d44d93bc0d9c3"
+        },
+        {
+          "id": "131072-3",
+          "length": 131072,
+          "requested_position": 0.95,
+          "evidence_start_token": 124486,
+          "evidence_position": 0.9497528076171875,
+          "expected": "DU-7264-M",
+          "answer_ids": [
+            22612,
+            45,
+            55,
+            15119,
+            45,
+            77
+          ],
+          "input_sha256": "9cb772799fcf182e9528cb981656da3708a729e0654be293b20c1b730d593d02"
+        }
+      ],
+      "tokenizer_sha256": "f84754e42cc4b08d5573a6b7306635e86ed04fff68ee707662d76d7044917176",
+      "max_new_tokens": 64,
+      "protocol": "BOS-conditioned raw continuation, no chat template; 4 fixed codes at 4 positions per length",
+      "limitations": "Eight synthetic repeated-background retrieval cases; no natural-document, general reasoning, or 1M capability claim",
+      "prepared": 1789545284.4576576,
+      "scorer_sha256": "b477d80d5b42a3db27ccf287ae04c7484fb87a55d8f2179f9a5736ca150ad199"
+    },
+    "rows": [
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "131072-3",
+          "length": 131072,
+          "requested_position": 0.95,
+          "evidence_start_token": 124486,
+          "evidence_position": 0.9497528076171875,
+          "expected": "DU-7264-M",
+          "answer_ids": [
+            22612,
+            45,
+            55,
+            15119,
+            45,
+            77
+          ],
+          "input_sha256": "9cb772799fcf182e9528cb981656da3708a729e0654be293b20c1b730d593d02"
+        },
+        "nll": 1.7650480270385742,
+        "prediction": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n\n\n\n\n\n\n\n\n",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "131072-3",
+          "length": 131072,
+          "requested_position": 0.95,
+          "evidence_start_token": 124486,
+          "evidence_position": 0.9497528076171875,
+          "expected": "DU-7264-M",
+          "answer_ids": [
+            22612,
+            45,
+            55,
+            15119,
+            45,
+            77
+          ],
+          "input_sha256": "9cb772799fcf182e9528cb981656da3708a729e0654be293b20c1b730d593d02"
+        },
+        "nll": 0.03138037770986557,
+        "prediction": "DU-7264-M。\n附件一：DU-7264-M。\n附件二：DU-7264-M。\n附件三：DU-7264-M。\n附件四：DU-7264-M。\n附件五：DU-7264-M。\n附件",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "8192-1",
+          "length": 8192,
+          "requested_position": 0.33,
+          "evidence_start_token": 2706,
+          "evidence_position": 0.330322265625,
+          "expected": "BZ-6428-P",
+          "answer_ids": [
+            66,
+            90,
+            45,
+            2501,
+            1009,
+            45,
+            80
+          ],
+          "input_sha256": "ada7459423f32a42f17aefb80e14f5ed5e175de36d609adcbc1d5672cef6dfd0"
+        },
+        "nll": 0.5192242860794067,
+        "prediction": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n答案：\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n答案：\n\n\n",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "8192-1",
+          "length": 8192,
+          "requested_position": 0.33,
+          "evidence_start_token": 2706,
+          "evidence_position": 0.330322265625,
+          "expected": "BZ-6428-P",
+          "answer_ids": [
+            66,
+            90,
+            45,
+            2501,
+            1009,
+            45,
+            80
+          ],
+          "input_sha256": "ada7459423f32a42f17aefb80e14f5ed5e175de36d609adcbc1d5672cef6dfd0"
+        },
+        "nll": 0.00015612374409101903,
+        "prediction": "BZ-6428-P。",
+        "exact": false,
+        "eos": true,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "8192-2",
+          "length": 8192,
+          "requested_position": 0.67,
+          "evidence_start_token": 5466,
+          "evidence_position": 0.667236328125,
+          "expected": "CT-1853-R",
+          "answer_ids": [
+            7849,
+            45,
+            58181,
+            45,
+            82
+          ],
+          "input_sha256": "200882032ab001c7731da90a2d1f90b12ac6d65e3ca5042d12f6f72f78365d6c"
+        },
+        "nll": 0.8468046188354492,
+        "prediction": "\n附件摘要：本段只記錄一般行政說明，未提供本次核對的有效編號。\n附件摘要：本段只記錄一般行政說明，未提供本次核對的有效編號。\n附件摘要：本段只記錄一般行政說明，未提供本次核對的有效編號。\n附件摘要：",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "8192-2",
+          "length": 8192,
+          "requested_position": 0.67,
+          "evidence_start_token": 5466,
+          "evidence_position": 0.667236328125,
+          "expected": "CT-1853-R",
+          "answer_ids": [
+            7849,
+            45,
+            58181,
+            45,
+            82
+          ],
+          "input_sha256": "200882032ab001c7731da90a2d1f90b12ac6d65e3ca5042d12f6f72f78365d6c"
+        },
+        "nll": 0.0004566058923956007,
+        "prediction": "CT-1853-R。",
+        "exact": false,
+        "eos": true,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "131072-2",
+          "length": 131072,
+          "requested_position": 0.67,
+          "evidence_start_token": 87806,
+          "evidence_position": 0.6699066162109375,
+          "expected": "CT-1853-R",
+          "answer_ids": [
+            7849,
+            45,
+            58181,
+            45,
+            82
+          ],
+          "input_sha256": "7d8ae8140544ea492477e5993f5dd7d7006d30f1bac9852bdf7d44d93bc0d9c3"
+        },
+        "nll": 3.9548192024230957,
+        "prediction": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n\n\n\n\n\n",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "131072-2",
+          "length": 131072,
+          "requested_position": 0.67,
+          "evidence_start_token": 87806,
+          "evidence_position": 0.6699066162109375,
+          "expected": "CT-1853-R",
+          "answer_ids": [
+            7849,
+            45,
+            58181,
+            45,
+            82
+          ],
+          "input_sha256": "7d8ae8140544ea492477e5993f5dd7d7006d30f1bac9852bdf7d44d93bc0d9c3"
+        },
+        "nll": 3.379732131958008,
+        "prediction": "沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。\n沒有任何文件。",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "8192-3",
+          "length": 8192,
+          "requested_position": 0.95,
+          "evidence_start_token": 7746,
+          "evidence_position": 0.945556640625,
+          "expected": "DU-7264-M",
+          "answer_ids": [
+            22612,
+            45,
+            55,
+            15119,
+            45,
+            77
+          ],
+          "input_sha256": "1c6d702aeb32b0876b40824f6c61c9fef0f91b5c8f286d6ddcb4b2a090a4f7de"
+        },
+        "nll": 0.6259325742721558,
+        "prediction": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n答案：\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n答案：\n",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "8192-3",
+          "length": 8192,
+          "requested_position": 0.95,
+          "evidence_start_token": 7746,
+          "evidence_position": 0.945556640625,
+          "expected": "DU-7264-M",
+          "answer_ids": [
+            22612,
+            45,
+            55,
+            15119,
+            45,
+            77
+          ],
+          "input_sha256": "1c6d702aeb32b0876b40824f6c61c9fef0f91b5c8f286d6ddcb4b2a090a4f7de"
+        },
+        "nll": 0.017610013484954834,
+        "prediction": "DU-7264-M。",
+        "exact": false,
+        "eos": true,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "131072-1",
+          "length": 131072,
+          "requested_position": 0.33,
+          "evidence_start_token": 43246,
+          "evidence_position": 0.3299407958984375,
+          "expected": "BZ-6428-P",
+          "answer_ids": [
+            66,
+            90,
+            45,
+            2501,
+            1009,
+            45,
+            80
+          ],
+          "input_sha256": "004ec5e963856a48c128773f0fa05636e058782574f0aa2dacfef4a883d5ab36"
+        },
+        "nll": 1.7947359085083008,
+        "prediction": "\n",
+        "exact": false,
+        "eos": true,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "131072-1",
+          "length": 131072,
+          "requested_position": 0.33,
+          "evidence_start_token": 43246,
+          "evidence_position": 0.3299407958984375,
+          "expected": "BZ-6428-P",
+          "answer_ids": [
+            66,
+            90,
+            45,
+            2501,
+            1009,
+            45,
+            80
+          ],
+          "input_sha256": "004ec5e963856a48c128773f0fa05636e058782574f0aa2dacfef4a883d5ab36"
+        },
+        "nll": 1.596493124961853,
+        "prediction": "沒有任何文件。\n附件一：沒有任何文件。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "8192-0",
+          "length": 8192,
+          "requested_position": 0.05,
+          "evidence_start_token": 426,
+          "evidence_position": 0.052001953125,
+          "expected": "AX-3971-K",
+          "answer_ids": [
+            25295,
+            45,
+            1886,
+            3365,
+            45,
+            75
+          ],
+          "input_sha256": "6a70ad60fcebe7859608619f42a8926157f8a7dbc3cce063b9c3d3fb878d9cda"
+        },
+        "nll": 0.15208081901073456,
+        "prediction": "AX-3971-K。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n請只輸出文件中的正式收件編號，不加說明。\n答案：本段只記錄一般行政說明，未加說明。\n答案：本段只記錄一般行政說明，未加",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "8192-0",
+          "length": 8192,
+          "requested_position": 0.05,
+          "evidence_start_token": 426,
+          "evidence_position": 0.052001953125,
+          "expected": "AX-3971-K",
+          "answer_ids": [
+            25295,
+            45,
+            1886,
+            3365,
+            45,
+            75
+          ],
+          "input_sha256": "6a70ad60fcebe7859608619f42a8926157f8a7dbc3cce063b9c3d3fb878d9cda"
+        },
+        "nll": 3.242365346523002e-05,
+        "prediction": "AX-3971-K。",
+        "exact": false,
+        "eos": true,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "base",
+        "model_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+        "case": {
+          "id": "131072-0",
+          "length": 131072,
+          "requested_position": 0.05,
+          "evidence_start_token": 6566,
+          "evidence_position": 0.0500946044921875,
+          "expected": "AX-3971-K",
+          "answer_ids": [
+            25295,
+            45,
+            1886,
+            3365,
+            45,
+            75
+          ],
+          "input_sha256": "11f3319a3728b54995e42e8718b617747bec0fed5e5689603f5ed901e5e00ddd"
+        },
+        "nll": 3.580120801925659,
+        "prediction": "\n",
+        "exact": false,
+        "eos": true,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      },
+      {
+        "model": "candidate",
+        "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+        "case": {
+          "id": "131072-0",
+          "length": 131072,
+          "requested_position": 0.05,
+          "evidence_start_token": 6566,
+          "evidence_position": 0.0500946044921875,
+          "expected": "AX-3971-K",
+          "answer_ids": [
+            25295,
+            45,
+            1886,
+            3365,
+            45,
+            75
+          ],
+          "input_sha256": "11f3319a3728b54995e42e8718b617747bec0fed5e5689603f5ed901e5e00ddd"
+        },
+        "nll": 3.7206497192382812,
+        "prediction": "沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式紀錄，沒有任何的正式",
+        "exact": false,
+        "eos": false,
+        "manifest_sha256": "018c7a65caeb729d56c8eeedde4aa8eab4509fec464b3479d72a8f434b14d591"
+      }
+    ]
+  }
+}

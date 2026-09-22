@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this version when using the model, code, or reports."
+type: software
+title: "Barbet 1B Structured SFT"
+authors:
+  - family-names: "voidful"
+version: "0.1.0"
+date-released: "2026-09-22"
+url: "https://github.com/voidful/barbet-structured-sft"
+repository-code: "https://github.com/voidful/barbet-structured-sft"
+abstract: "A specialized Traditional Chinese structured text SFT checkpoint with training source, measured limitations, and reproducible inference examples."

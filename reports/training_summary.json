@@ -1,0 +1,4571 @@
+{
+  "model_id": "OpenFormosa/barbet-1b-base",
+  "base_revision": "4dbb35216a32de59570a3f0d164804f25c82009d",
+  "dataset_id": "voidful/barbet-sft",
+  "dataset_revision": "0bf2389cbcd6e828af9df0676aed56abc61c4c2e",
+  "training": {
+    "step": 7657,
+    "tokens": 1490165039,
+    "supervised_tokens": 225601357,
+    "examples": 980000,
+    "seconds": 16767.742726802826,
+    "status": "trained_pending_release_evaluation"
+  },
+  "config": {
+    "root": "outputs/sft_20260916",
+    "model_revision": "4dbb35216a32de59570a3f0d164804f25c82009d",
+    "dataset_revision": "0bf2389cbcd6e828af9df0676aed56abc61c4c2e",
+    "seed": 42,
+    "epochs": 1,
+    "global_batch_examples": 128,
+    "micro_token_budget": 8192,
+    "max_micro_examples": 4,
+    "learning_rate": 1e-05,
+    "min_lr_ratio": 0.1,
+    "warmup_ratio": 0.03,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "save_steps": 500,
+    "eval_steps": 500,
+    "validation_per_family": 4,
+    "notes": {
+      "schedule": "1 epoch, cosine: Zephyr full SFT precedent; exact LR 1e-5 and final ratio 0.1 are conservative heuristics for this hybrid 1B",
+      "warmup_batch": "3% warmup and 128 examples: Tulu 3 SFT precedent",
+      "optimizer": "AdamW beta 0.9/0.95 from LLaMA/OLMo; weight decay 0.01 is a task heuristic",
+      "precision": "FP32 parameters, gradient reduction and Adam states, BF16 autocast; original model kernels",
+      "length": "All complete sequences, no truncation; adaptive microbatches, no cross-example packing",
+      "sources": [
+        "https://raw.githubusercontent.com/huggingface/alignment-handbook/main/recipes/zephyr-7b-beta/sft/config_full.yaml",
+        "https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B-SFT"
+      ]
+    }
+  },
+  "trainer_git_sha": "0612f9ef52d083366111dc5a494c3d30120142f6",
+  "trainer_sha256": "39ab25885ac0c27106985139b180819e6e95d45db58a116cacd34d62d78c35a3",
+  "common_sha256": "d5d3e8f9ca89b7f113ca4cb7d2988eacda42ca0094bca8ca5772bf11d104d72b",
+  "data_manifest_sha256": "67117cd9152e9dcb21ae11bb3d6097a5d8869fab50daabc8503995323a0bedf2",
+  "precision": "FP32 master parameters and Adam states; BF16 autocast; BF16 export with original 336 FP32 Mamba parameters",
+  "loss": "Assistant response tokens and EOS only; global supervised-token normalization",
+  "examples_packed": false,
+  "truncation": false,
+  "max_training_tokens": 168442,
+  "hardware": {
+    "gpus": 8,
+    "name": "NVIDIA H200 NVL"
+  },
+  "framework": {
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "event": "validation",
+      "step": 0,
+      "nll": 1.8608347464440635,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 1.9994495490501667,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 1.300848005496112,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 2.695358877395516,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 1.6066332778014705,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 1.7067311811272265,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 3.0203694701194763,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 2.2233768888939185,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 2.878215189379547,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 2.692615719225905,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 2.14379774069382,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 1.362877910787409,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 1.7190439029379105,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 1.8048355700313181,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 1.3829043655467212,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 2.82092546582222,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 2.6772566504250355,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 1.644123929503274,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 2.3991818995702836,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 1.7708019936059,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 2.253660754931685,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 2.7009170915478857,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 2.6495399101625514,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 2.776488736361805,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 1.2133857185141885,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 1.9946076363579839,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 2.8361750189463297,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 1.4699357637652644,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 1.2231729278989865,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 2.317462096048232,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 2.8774229151862007,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 1.2071099166284527,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 2.8179873580733936,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 2.297152139885085,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 1.211191941815895,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 2.694265810520418,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 2.8024225655261925,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 1.1521617717282269,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 2.0921265908075624,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 1.3203800133689325,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 1.1977996706155754,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 2.528888287284808,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 2.110203370699455,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 1.6002061756582209,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 2.2304399306533718,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 2.7619530872781146,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 3.0897952641836657,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 2.744309156784129,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 2.6830974220281942,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 1.2307007645981178,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 2.277505065167992,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 1.365157308703064,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789542549.299783
+    },
+    {
+      "event": "validation",
+      "step": 500,
+      "nll": 0.01237074421707261,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0021557031903849467,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.03129556624704198,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.008377234677353235,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.0028630383149589184,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.00395264382209984,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.030851265881210566,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004619788853482757,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007789495420588561,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.004445810471508905,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.007018672883258028,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0028155419605663803,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.004223299723710701,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0031111011436829963,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.002786078074766687,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.015961185889900663,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.030694804525592603,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.0030095721208253656,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.0073749913254334614,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.004590189238792973,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.02297136624970525,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.021639621981950564,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.00955762329387561,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.007152297093684764,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.02681484936592763,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0028643437436359945,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.013531309509028991,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.0032312246765309003,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.019293754605575343,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002877768805361728,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.010220812086065833,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.004145981351953055,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.013647199508462412,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.024484637110227987,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.026950447589323332,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.006834079936567333,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.008434916881743137,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.015753439683515783,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.005717512440018067,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.018234574558950622,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.002541744068277568,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.022322297487652548,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.005623531210285757,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0031297037899595953,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0028987799750586204,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.015205634016067136,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.023258028821640426,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006036993653777402,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.009450778520602394,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.03336165946934165,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0029837164908050767,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.015198373574363433,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789544156.572924
+    },
+    {
+      "event": "validation",
+      "step": 1000,
+      "nll": 0.0061487763797789564,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0026455369147729,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.008312852088568568,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.007076321164868883,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.002914535628084493,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0034769511449180344,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.020018334966152906,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004865598723909079,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.00782963773723282,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.006059418485197297,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.004899952468320222,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0017924769904072348,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0037500497413863244,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0034852123252399588,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0027559031388823896,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.0036079588000817843,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.00798611350968514,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.004606889768130025,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.00294119782023588,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.01276227445432164,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.02489503962749021,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.004463958118337198,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.02877990312909684,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005837881114985981,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.003545774986172591,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002356461880919643,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.009193799798376858,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002592166686198701,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0034011680378306726,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002749065662136496,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.010990381141891704,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.005050866997925824,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.008073886400476718,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.006521156528365931,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0036375451510316987,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.006065410357569494,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.006338709581005073,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.009792776254319414,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.005119458817002092,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.00890950645805587,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0025005501643959403,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005609958817462453,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004914581981422596,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.003029169444035474,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.002960484383917343,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.006144697646170046,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.0109928642005588,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006602290172600983,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.008431994773755487,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.006556687095359882,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.002728896407473796,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.00858716077457827,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789544930.2549417
+    },
+    {
+      "event": "validation",
+      "step": 1500,
+      "nll": 0.005107905025410812,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.002193345153575827,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.00685679403144242,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.011838625012827453,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003192328660364794,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0035240666617464026,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.006002501235343516,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.005620990738889395,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007698596306437753,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.009833347655232217,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.004527944943599277,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0032178555564001273,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0034226539993850893,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0037113140485640884,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.002714896288173469,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.007425344413301597,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.005691725206996286,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.002662538566053082,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004347685094111833,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.004137602710410486,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.015091832527699706,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.006291403728493742,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.007825449238755281,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.006226134507109222,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.00328081788433199,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0027003931912442302,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.01080778889823705,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.003125648436791919,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0019708768979192436,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0028468877417660915,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.006402463076769241,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.002264010224286492,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005845799009936551,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004551047348650172,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0021443126253049673,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.010509926834774594,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.010516835843048732,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.004901779731054725,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.004962353989902827,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.008537264610623919,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0024650940317392676,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.0053551820304251745,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.005312824887888772,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.003221893419455635,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.002960191861561993,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.006808866832455866,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.011712693263738673,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.007842092303694412,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.007191751739350762,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0030566255205754984,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.002959170222996725,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.011623973801734766,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789546375.6012416
+    },
+    {
+      "event": "validation",
+      "step": 2000,
+      "nll": 0.004587074608950198,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.003939804434776306,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.008532256311995239,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.0038265235437108065,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.004038887644597029,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0037050976370709486,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.007240352337248623,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.0054193745051077675,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007302529653973136,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.007497896038005199,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.00467999703566528,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.002215249173156026,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.002753748787149416,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.004746973690023457,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026499238631099856,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.005066363495619347,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006212091217653355,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.0036666327582324967,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.0028970985678119622,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.003512807977415991,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.00911474894661889,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005446694237745811,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.015519866904780221,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.006218440695319107,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.004895612500843402,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.00198912392071902,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.005455457408291598,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.00276082613670225,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0029036142133157393,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0030163397060345805,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.005848045355274475,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0018355365857977153,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005257613306942706,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004853397214485865,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.006618255013962143,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.005369186719068356,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.003830833183340667,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.005198583060051205,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.0043643882504427215,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.002270279015416431,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0024315981593655894,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005105514919794187,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.00469802230584166,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0033569023025837915,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.003926513523979606,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005879790077253079,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.011690516939294014,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.007147979508186811,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004775951008663316,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.004975105016556982,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0030661072375171463,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.00286034081642839,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789547045.1910846
+    },
+    {
+      "event": "validation",
+      "step": 2500,
+      "nll": 0.003984521731259947,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.001820792538286508,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.013411931647876357,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004271452665787691,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.0033874870667307726,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.003422448663769659,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.00812813057564199,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004153330939631897,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007151534027512629,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.00736572060110024,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.008072763514089382,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0029743945829873307,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0031748069767881084,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.003958239159344331,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0025722070289005464,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.005558390652295202,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006809972924581286,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.002678324570247935,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004580107485862816,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.0028920826282388414,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0034832439278782656,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005449218149775657,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004643029876678145,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005509096340199472,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0025756093062683358,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002688553708438308,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.004536901709701245,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.0030693681330952807,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0020917988173770894,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002847695289253818,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.004687517475602882,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0021260701042603745,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.006034605319534118,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004883081862603181,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.002831984016689182,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.0034652736933616503,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.005477942049171917,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0030766702837653594,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.007001658172847649,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.002005539892329321,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023620190195796,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005132794754114876,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.005356467871979325,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.00306029920669812,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0025645911293945612,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.0055395091555348434,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006471444974859915,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006546626925311407,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004092691167122988,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0036459481405607358,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0027843281235636294,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0021200301730532217,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789548210.9402354
+    },
+    {
+      "event": "validation",
+      "step": 3000,
+      "nll": 0.0036131214125874637,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.003366545805755746,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.0046573299257896645,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.0038984571823349862,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003216603099721047,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0033290662773153893,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.008645132184028625,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.00394631217951796,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007312452393774119,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.00655440827925462,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.007452769018709659,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.002058270474245246,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0034532598567815014,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.003662656601248444,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0025866057026143977,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.0050861469384593265,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006963954152272068,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.003739151111041001,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.003853175405818386,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.0033172547847905537,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0029920780715735245,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.004769534780861479,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004612778271460033,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005776280283335769,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0017578534195168357,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002165401065483307,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.005289757624268532,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002544093073188584,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0016514034888547762,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0029701750157910644,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.006084285685626258,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0017587724463057712,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.006254796025071604,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.006025118652697919,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.00193782308531057,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004523504059010696,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.0034781803877155805,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.002226582804771369,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.006293955429427288,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.0025058653774364397,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0024107429306274956,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005628909707754347,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.005020301977785125,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0031799285250201904,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0034988861904722175,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005434060527928636,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006600086103147106,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006277233448350667,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.005170818434551429,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0023576754233039943,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0028724243171576376,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.004832229929292204,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789549512.3867204
+    },
+    {
+      "event": "validation",
+      "step": 3500,
+      "nll": 0.0034346846752497167,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0025639055274699913,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.005239636415546815,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004123137128511583,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.0031479649598273518,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0033328923175320905,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.004462880082428455,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.0046113262001275515,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.00800286874623667,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.011475668976116241,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.005297443917873552,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.002655929884690631,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.003160724508899793,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.003927763102684116,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026103133570728474,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.0042702031896139185,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.005454554348751257,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.002930865400749664,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.005404872056350213,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.00294701716451268,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.003329205439082665,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005191581932148922,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.0044108865627152495,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005848549866685325,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0017306810615780102,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0022761731965737974,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.006045506009832025,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002855314983585811,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0016796733419669088,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0027747404110613303,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.005000856818099107,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0018879014781240106,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005796120304148644,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004957169133038925,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0020612466559965363,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004053020318068804,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.005173418327975754,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0017888314268787637,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.005199062030190762,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.002074557725170919,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0024038300362562164,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005096574738537841,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004568485231401764,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0029771336842877943,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0029269971379994593,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.00552381579980774,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006180304137366187,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.009119630313589646,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.0045743262749135686,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0015317642544822,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.002767399080477438,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0019518936227625899,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789550419.1242068
+    },
+    {
+      "event": "validation",
+      "step": 4000,
+      "nll": 0.003703940321208725,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.002341682821359678,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.00882167173491221,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004271964255525772,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.002722821710368166,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.003558675166786464,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.006280937581323087,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.0038668201048001898,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007597497271871223,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.009066491551997529,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.007306453760050364,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.003440235335932394,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.004085065928162965,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.003173608076421247,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026747592509535133,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.006631737172914048,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.005878054589915656,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.002256249414367528,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.006390965454989956,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.002845971565743904,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.003795429669675473,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005615277774631977,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004489338033923974,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.0055982142647492215,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.00188477793626406,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.00242819024854873,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.0056556573704195515,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.0034690974378448606,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0016497815432624375,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002763462358325794,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.004663540260766499,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.002117781380635112,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005341969893197529,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004564063206947009,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.002299743355454545,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.003853826291648851,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.005388174536660977,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0016905653312335438,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.005943973173354367,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.0020823359926564924,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0024717401464149835,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005265418586878571,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.00488922347939663,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.003095621295537942,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0030531628405139196,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005329589688854451,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.00615067465538454,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.007171248552548662,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.00442417840945678,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.002754412640637451,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0026957004905217193,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020090612945794324,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789551473.2292683
+    },
+    {
+      "event": "validation",
+      "step": 4500,
+      "nll": 0.0034379179722858035,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0025054226563199712,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.005053864218590067,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004151732919376288,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.0032891110314508783,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.003337588063600612,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.008080472936853766,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004884000134850575,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.00761134326409217,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.006846533920522075,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.004213372453794641,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0023705588829699173,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.00316998964586557,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0038340144109088874,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.002617046090378601,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.004162799611221999,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006487924922766813,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.0035055131811943265,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.005182019425365998,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.003224619617484526,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0035503344550485206,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.004969538289566185,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.009319605598302817,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005592626564474533,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0016245880235565755,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0022734132195369175,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.004854720236423115,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002797796828586056,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001629520039232411,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0027077141410175396,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.005087097784936694,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0016845595168563136,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005554611958602133,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.005192463425087876,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.001718243465324279,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004714972677550489,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.004796501716270527,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0019570865925807534,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.0044052909586961815,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.0021129459565372437,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023555761400544024,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005335345684321803,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004771032902811255,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0030566555310468204,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0029905633382135296,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005428485343117238,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.0062988757838524576,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.00623488697426206,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004648766310852975,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0017507091941095293,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.002762929482150425,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020928174168235083,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789552432.937363
+    },
+    {
+      "event": "validation",
+      "step": 5000,
+      "nll": 0.003328592332859627,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.002086349183107437,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.003940831808960338,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004059092819676804,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003005658822281465,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.003420047800701048,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.009381842566654086,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004889173771139471,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007348549496187433,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.005811063795624963,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.004733903796838249,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0026548552643240356,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0034655822410048255,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0035036825136268053,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026080952033827685,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.0048655694210901854,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006964657175649543,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.003134793305958984,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004320820573349895,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.003000808065831581,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0031396357296402185,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005427434625295557,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.0044304874167141,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005604244715213716,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0018350908026058576,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0025441485504882457,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.005835680228192359,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.0029868456291191952,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001723332571763417,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0026572146649884794,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.005931245451210998,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0018761231259671611,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.0052883769230296215,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004954350702298273,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0017021662185105883,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004301815211863047,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.0038886710439840887,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.001816204207701312,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.004708725652024527,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.001960942522530654,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023509339808034137,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.00520600770350273,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004744866863666628,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.003055821390201648,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0027935609127054412,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005413256796769971,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006430412702709099,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.005865603850050818,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.005831614487607547,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0014826215060397604,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0027022751990832317,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020669738703619563,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789553519.1524937
+    },
+    {
+      "event": "validation",
+      "step": 5500,
+      "nll": 0.003313301183704687,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0023918781018061244,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.0037002883260496534,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004087696242521503,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003300033512099062,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0035022522210687726,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.0064227895345538855,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.00498741658725293,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007494746643991371,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.007984075172140406,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.00420335545835985,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.002778114129356933,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0031005182731034917,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0038469643163346295,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.002672194446353032,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.005108562334595869,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.005824541711250579,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.0029295056390097247,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.0052791738971358255,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.0029385959101965566,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.003114370135968423,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005427272092098387,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004534739871285384,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.0054612617266984655,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0017349115703478913,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002371381856620503,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.0055311825669681035,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.0029908196824323004,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001702010500158553,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002760939673979336,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.0053503942484634795,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.001965361504420241,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005538117813800151,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004852858871786988,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0017213873889916687,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004167953795272737,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.0044050397791729435,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0017388325425317175,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.004413897139028117,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.0020140356949255914,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023540947779338624,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005099220486186571,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004648749306612336,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0031293757392164786,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0029155002882950663,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005401923564847472,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006141684344670486,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006838548710390891,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004982158044924655,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0015819770326035926,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0026385788301693147,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020737751204242014,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789554383.367832
+    },
+    {
+      "event": "validation",
+      "step": 6000,
+      "nll": 0.003279761869582071,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0025581821893614813,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.0033771775683169307,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004142036417207277,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003516709351764813,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0035002078208616937,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.0077190890442579985,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.005148308773690143,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007286072879327529,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.006838729466670556,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.003470142918512604,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0026539223230751365,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0030849246898708004,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0040098120782362376,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026070277748850026,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.0039596280261563754,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006322634759611516,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.0028600898963309783,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004516484181010196,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.003002197334349767,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0033797017884521566,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005304982152845815,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004402468090764942,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005711447875721893,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0016143194009639505,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002270911479145925,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.0056699257553555074,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002923579342326019,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.0015656300523948874,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0028285025185743225,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.00546055537166207,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0018777962353466362,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005536599895761659,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004851317632710561,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0016438827925057378,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.005321940609944924,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.0040116878870807135,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0017776937125489,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.00413616258033801,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.0020099653028624524,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.00229878706070429,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005211185326705395,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004728657038003652,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0029912205087275455,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.002914999593822129,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005260825285312626,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.0062780471980082905,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.00635880222151479,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.005210263205215406,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0017675060488626412,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.002700721192652884,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020199222191127427,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789555386.30956
+    },
+    {
+      "event": "validation",
+      "step": 6500,
+      "nll": 0.0032957850520736825,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0023915632346901915,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.004637770692192542,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004158007681244679,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003207624253506462,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0034761371766729395,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.007713722181506455,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004643591197930202,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007261658930926735,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.006987109860072208,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.004396451761851371,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.002839010079618561,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0032237401665193895,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0037395361156297336,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0025501227088594682,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.004734770380115758,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006621556720380292,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.003133819158067979,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004214173745123201,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.0029366806465790448,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0034603939904582505,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005312387728802511,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.0044035361814489474,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005483802266501385,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0015629442833583818,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002371175271562404,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.004146491937960187,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.0028573229591316186,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001542955660511004,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002700380627668245,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.0047749682329595085,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.001920805154880446,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.006064793912810273,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.0047363271845305074,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0016706464677704233,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004581584890312966,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.004922121040955726,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0017770537146058313,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.004688367662200639,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.001958651047484666,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.002350032196400684,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005097636255814815,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004516791367433049,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0031021461366609634,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.002851392638951759,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.0053846416444438255,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006295446037816314,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006505590421856496,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004141909085119377,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0015331978846478268,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0026970995886215162,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020665649193033564,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789556415.5288675
+    },
+    {
+      "event": "validation",
+      "step": 7000,
+      "nll": 0.0032271728631638164,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0021827382812324653,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.002816708011735402,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.004237036334364606,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.003134998709152816,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.0033927784309310334,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.007539351470768452,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004866672135472148,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007430950847712799,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.007150054189097371,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.004102746156533644,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.002966116133489107,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.003367564236316587,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.003654876801495751,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.002561149528973099,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.004530466825235635,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006181621253660165,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.00279620544364055,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.0047212984717013885,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.0026873292126863807,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.002917731130913555,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.005432754928228732,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004514966224897889,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.00558958563417706,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0015430514740687848,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0023711821394693904,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.005174502939141045,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.00299000301170297,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001662625228307241,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0027003427293262818,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.005090921130197655,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0019640697474407934,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.005795933256740682,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004743274997287829,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0017120754396249944,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004688229856471862,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.004477481436769936,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0017370178089744603,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.0045044902762363575,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.001966952170341369,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023533453516403685,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005218567868334714,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004530354911164439,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.0028995679981517987,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.002851366057616322,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005391676090802102,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006449404028265387,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006497240963389778,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004827442334665782,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0014904873105142204,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.00269324122905478,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0019810606098831164,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789557683.2437248
+    },
+    {
+      "event": "validation",
+      "step": 7500,
+      "nll": 0.0032569038437614386,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.0023393259660726222,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.0036291956020486926,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.0039650831142190235,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.0030018916358845044,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.003475487798914623,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.006880166125483811,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.0047583098065444454,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007491252446030291,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.007636282616470863,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.00419804397970438,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0026539629949123094,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0034480791181007737,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0035795280541144853,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026069270863540864,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.004950391909418006,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.0062074934117546925,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.003133766186597236,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004720848891567312,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.003066671814831863,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.003220713724935555,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.004958120117259917,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.004495820940525236,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005581499312552708,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0015322482113760815,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.0023194081376855954,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.004630011960398406,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002790985671121152,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001621035311488358,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.002760547394424084,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.004737550037680194,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0018741825316478367,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.006047738203778863,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.005067583500307851,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0016366871340320302,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004483784128716516,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.004676060321475372,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0018134297580852151,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.0044838169355630175,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.001958353117594486,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023466462642505966,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005097551884629377,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.004422663821625304,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.003039873241513072,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.0029149243002561773,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.005383454061062761,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006276874933644657,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006656379875153373,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.004314218646297394,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0016753667704405314,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.0026932675723727903,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.0020162513616788155,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789558955.1542397
+    },
+    {
+      "event": "validation",
+      "step": 7657,
+      "nll": 0.003203690335614839,
+      "supervised_tokens": 44429,
+      "examples": 204,
+      "by_family": {
+        "ASR_CORRECTION": {
+          "nll": 0.002613618167855873,
+          "tokens": 1160,
+          "examples": 4
+        },
+        "ASR_NBEST_RANKING": {
+          "nll": 0.00199694190482283,
+          "tokens": 1677,
+          "examples": 4
+        },
+        "ASR_QUALITY": {
+          "nll": 0.00424159664361835,
+          "tokens": 670,
+          "examples": 4
+        },
+        "ASR_VERBATIM": {
+          "nll": 0.0030016647559711657,
+          "tokens": 885,
+          "examples": 4
+        },
+        "BASE_CAPABILITY_REPLAY": {
+          "nll": 0.003401156454255991,
+          "tokens": 818,
+          "examples": 4
+        },
+        "DOCUMENT_TYPE_CLASSIFICATION": {
+          "nll": 0.00842349766753614,
+          "tokens": 368,
+          "examples": 4
+        },
+        "DOCUMENT_VERSION_MATCH": {
+          "nll": 0.004642640625167152,
+          "tokens": 598,
+          "examples": 4
+        },
+        "DOMAIN_CLASSIFICATION": {
+          "nll": 0.007280939275701164,
+          "tokens": 382,
+          "examples": 4
+        },
+        "EMOTION_CLASSIFICATION": {
+          "nll": 0.006233311829483254,
+          "tokens": 397,
+          "examples": 4
+        },
+        "ENTITY_RESOLUTION": {
+          "nll": 0.00419698183511589,
+          "tokens": 590,
+          "examples": 4
+        },
+        "EVENT_EXTRACTION": {
+          "nll": 0.0028388638508341246,
+          "tokens": 1045,
+          "examples": 4
+        },
+        "FAITHFUL_OCR": {
+          "nll": 0.0033713568367664997,
+          "tokens": 843,
+          "examples": 4
+        },
+        "FORMAT_PRESERVATION": {
+          "nll": 0.0034145990595815406,
+          "tokens": 759,
+          "examples": 4
+        },
+        "FORM_EXTRACTION": {
+          "nll": 0.0026105054211277598,
+          "tokens": 1064,
+          "examples": 4
+        },
+        "HUMAN_ESCALATION": {
+          "nll": 0.004847944648160288,
+          "tokens": 600,
+          "examples": 4
+        },
+        "INTENT_CLASSIFICATION": {
+          "nll": 0.006620569658467805,
+          "tokens": 439,
+          "examples": 4
+        },
+        "LEDGER_FIELD_EXTRACTION": {
+          "nll": 0.0031336459804768278,
+          "tokens": 885,
+          "examples": 4
+        },
+        "LEDGER_UPDATE": {
+          "nll": 0.004411092336878789,
+          "tokens": 588,
+          "examples": 4
+        },
+        "LONG_CONTEXT_ACTIVE_VALUE": {
+          "nll": 0.0029358224056713427,
+          "tokens": 926,
+          "examples": 4
+        },
+        "LONG_CONTEXT_CONTRADICTION": {
+          "nll": 0.0034532067725558794,
+          "tokens": 887,
+          "examples": 4
+        },
+        "LONG_CONTEXT_EVIDENCE_LINKING": {
+          "nll": 0.0051915739340899145,
+          "tokens": 535,
+          "examples": 4
+        },
+        "LONG_CONTEXT_LEDGER_UPDATE": {
+          "nll": 0.0042973722138182745,
+          "tokens": 632,
+          "examples": 4
+        },
+        "MODALITY_ROUTING": {
+          "nll": 0.005596631588845305,
+          "tokens": 497,
+          "examples": 4
+        },
+        "MT_CANDIDATE_RANKING": {
+          "nll": 0.0015680337314581461,
+          "tokens": 1788,
+          "examples": 4
+        },
+        "MT_POST_EDIT": {
+          "nll": 0.002222359387709512,
+          "tokens": 1170,
+          "examples": 4
+        },
+        "MT_QUALITY": {
+          "nll": 0.0041312987986020745,
+          "tokens": 600,
+          "examples": 4
+        },
+        "NAMED_ENTITY_EXTRACTION": {
+          "nll": 0.002853140826844859,
+          "tokens": 972,
+          "examples": 4
+        },
+        "OCR_CANDIDATE_RANKING": {
+          "nll": 0.001584978828420689,
+          "tokens": 1771,
+          "examples": 4
+        },
+        "OCR_CORRECTION": {
+          "nll": 0.0027039629527696625,
+          "tokens": 1005,
+          "examples": 4
+        },
+        "OCR_QUALITY": {
+          "nll": 0.004851936027573954,
+          "tokens": 560,
+          "examples": 4
+        },
+        "OCR_REGION_ALIGNMENT": {
+          "nll": 0.0019610806476065886,
+          "tokens": 1482,
+          "examples": 4
+        },
+        "PSEUDO_AUDIO_GROUNDING": {
+          "nll": 0.00565263088986588,
+          "tokens": 480,
+          "examples": 4
+        },
+        "PSEUDO_IMAGE_GROUNDING": {
+          "nll": 0.004844221862731502,
+          "tokens": 560,
+          "examples": 4
+        },
+        "RETRIEVAL_RANKING": {
+          "nll": 0.0016096136684070578,
+          "tokens": 1723,
+          "examples": 4
+        },
+        "RISK_CONTROL": {
+          "nll": 0.004403687698856717,
+          "tokens": 620,
+          "examples": 4
+        },
+        "SHARED_INSPECTOR": {
+          "nll": 0.0046819499597916935,
+          "tokens": 607,
+          "examples": 4
+        },
+        "SOURCE_TARGET_ALIGNMENT": {
+          "nll": 0.0017765496386939724,
+          "tokens": 1532,
+          "examples": 4
+        },
+        "SPEAKER_MATCHING": {
+          "nll": 0.004687027660203221,
+          "tokens": 593,
+          "examples": 4
+        },
+        "SPEECH_TEXT_ALIGNMENT": {
+          "nll": 0.002004731733891804,
+          "tokens": 1387,
+          "examples": 4
+        },
+        "TABLE_EXTRACTION": {
+          "nll": 0.0023498591896408128,
+          "tokens": 1182,
+          "examples": 4
+        },
+        "TABLE_GROUNDING": {
+          "nll": 0.005203612805754785,
+          "tokens": 533,
+          "examples": 4
+        },
+        "TERMINOLOGY_MATCH": {
+          "nll": 0.00461638707008547,
+          "tokens": 602,
+          "examples": 4
+        },
+        "TERMINOLOGY_REPLAY": {
+          "nll": 0.003039683968775341,
+          "tokens": 915,
+          "examples": 4
+        },
+        "TEXT_DENOISING": {
+          "nll": 0.003054064659386122,
+          "tokens": 952,
+          "examples": 4
+        },
+        "TEXT_GROUNDING": {
+          "nll": 0.0055154007372208115,
+          "tokens": 516,
+          "examples": 4
+        },
+        "TOOL_ROUTING": {
+          "nll": 0.006285079967702541,
+          "tokens": 442,
+          "examples": 4
+        },
+        "TRANSCRIPTION_MODE": {
+          "nll": 0.006221073373183782,
+          "tokens": 427,
+          "examples": 4
+        },
+        "TTS_CONTENT_QUALITY": {
+          "nll": 0.0044284248176743,
+          "tokens": 629,
+          "examples": 4
+        },
+        "TTS_PLAN_RANKING": {
+          "nll": 0.0017828427464539548,
+          "tokens": 1728,
+          "examples": 4
+        },
+        "TTS_SPOKEN_FORM": {
+          "nll": 0.002700641294670047,
+          "tokens": 1030,
+          "examples": 4
+        },
+        "WRITTEN_SPOKEN_ALIGNMENT": {
+          "nll": 0.002065683128575812,
+          "tokens": 1378,
+          "examples": 4
+        }
+      },
+      "time": 1789559315.5064268
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "candidate_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+  "base_sha256": "d8bb259836dc98193d185d4c017ee34eee0fa23e4f695eb5e9d042ad618b1305",
+  "strict_generation": {
+    "correct": 214,
+    "n": 408,
+    "rate": 0.5245098039215687
+  },
+  "error_field_combinations": {
+    "confidence_target": 189,
+    "action,confidence_target,quality_score": 5
+  },
+  "multiple_field_errors": [
+    {
+      "index": 6721,
+      "record_id": "bgd_tw_v2_0996721",
+      "family": "TTS_CONTENT_QUALITY",
+      "differences": {
+        "action": {
+          "expected": {
+            "arguments": {
+              "reason": "決定性欄位遭遮蔽"
+            },
+            "tool": "HUMAN_REVIEW"
+          },
+          "prediction": {
+            "arguments": {
+              "reason": "決定性依據缺少來源證據"
+            },
+            "tool": "HUMAN_REVIEW"
+          }
+        },
+        "confidence_target": {
+          "expected": 0.88,
+          "prediction": 0.96
+        },
+        "quality_score": {
+          "expected": 0.5,
+          "prediction": 0.35
+        }
+      }
+    },
+    {
+      "index": 9301,
+      "record_id": "bgd_tw_v2_0999301",
+      "family": "MT_QUALITY",
+      "differences": {
+        "action": {
+          "expected": {
+            "arguments": {
+              "reason": "決定性欄位遭遮蔽"
+            },
+            "tool": "HUMAN_REVIEW"
+          },
+          "prediction": {
+            "arguments": {
+              "reason": "決定性依據缺少來源證據"
+            },
+            "tool": "HUMAN_REVIEW"
+          }
+        },
+        "confidence_target": {
+          "expected": 0.88,
+          "prediction": 0.96
+        },
+        "quality_score": {
+          "expected": 0.5,
+          "prediction": 0.35
+        }
+      }
+    },
+    {
+      "index": 3720,
+      "record_id": "bgd_tw_v2_0993720",
+      "family": "MT_QUALITY",
+      "differences": {
+        "action": {
+          "expected": {
+            "arguments": {
+              "reason": "決定性欄位遭遮蔽"
+            },
+            "tool": "HUMAN_REVIEW"
+          },
+          "prediction": {
+            "arguments": {
+              "reason": "決定性依據缺少來源證據"
+            },
+            "tool": "HUMAN_REVIEW"
+          }
+        },
+        "confidence_target": {
+          "expected": 0.88,
+          "prediction": 0.96
+        },
+        "quality_score": {
+          "expected": 0.5,
+          "prediction": 0.35
+        }
+      }
+    },
+    {
+      "index": 1161,
+      "record_id": "bgd_tw_v2_0991161",
+      "family": "OCR_QUALITY",
+      "differences": {
+        "action": {
+          "expected": {
+            "arguments": {
+              "reason": "決定性欄位遭遮蔽"
+            },
+            "tool": "HUMAN_REVIEW"
+          },
+          "prediction": {
+            "arguments": {
+              "reason": "決定性依據缺少"
+            },
+            "tool": "HUMAN_REVIEW"
+          }
+        },
+        "confidence_target": {
+          "expected": 0.88,
+          "prediction": 0.96
+        },
+        "quality_score": {
+          "expected": 0.5,
+          "prediction": 0.35
+        }
+      }
+    },
+    {
+      "index": 5420,
+      "record_id": "bgd_tw_v2_0995420",
+      "family": "ASR_QUALITY",
+      "differences": {
+        "action": {
+          "expected": {
+            "arguments": {
+              "reason": "決定性欄位遭遮蔽"
+            },
+            "tool": "HUMAN_REVIEW"
+          },
+          "prediction": {
+            "arguments": {
+              "reason": "決定性依據缺少來源證據"
+            },
+            "tool": "HUMAN_REVIEW"
+          }
+        },
+        "confidence_target": {
+          "expected": 0.88,
+          "prediction": 0.96
+        },
+        "quality_score": {
+          "expected": 0.5,
+          "prediction": 0.35
+        }
+      }
+    }
+  ],
+  "retention_relative_bpb_change": {
+    "zh_tw_zh": 0.03127980634380245,
+    "math": 0.16210223421308512,
+    "ja_ko": 0.01581871032190385,
+    "english_general": 0.012976731059650914,
+    "code": 0.27355902866058734,
+    "multilingual": 0.026879507330488828
+  },
+  "fresh_probes": {
+    "base": {
+      "overall": {
+        "exact": 0,
+        "n": 16
+      },
+      "ASR": {
+        "exact": 0,
+        "n": 4
+      },
+      "OCR": {
+        "exact": 0,
+        "n": 4
+      },
+      "TTS": {
+        "exact": 0,
+        "n": 4
+      },
+      "MT": {
+        "exact": 0,
+        "n": 4
+      }
+    },
+    "candidate": {
+      "overall": {
+        "exact": 0,
+        "n": 16
+      },
+      "ASR": {
+        "exact": 0,
+        "n": 4
+      },
+      "OCR": {
+        "exact": 0,
+        "n": 4
+      },
+      "TTS": {
+        "exact": 0,
+        "n": 4
+      },
+      "MT": {
+        "exact": 0,
+        "n": 4
+      }
+    }
+  },
+  "fresh_probe_manual_review": "All 16 candidate outputs inspected. They repeat/rephrase the prompt or continue unrelated text; the zero score is not explained by valid alternate translations.",
+  "interpretation": "Improvement is established for the synthetic structured request/response distribution. Free-form instruction transfer is not established; code and mathematics BPB regress materially. This is a specialized text SFT initialization, not a general instruction model or an end-to-end ASR/TTS/OCR system.",
+  "retention_scorer_provenance_verified": true,
+  "sources": {
+    "evaluation/base_downstream/rank-0.jsonl": "2537011dbb8ae176541bd5c64f2896d1b76f6059d9f3f48f66338b4d4949d9d8",
+    "evaluation/base_downstream/rank-1.jsonl": "350631da9dee59bf7ac0c7a71063d1937645a32e2cb3f90079e83d96fe47bdbf",
+    "evaluation/base_downstream/rank-2.jsonl": "ea4334af39d324710e05d4782634acb97ff7cd85a5f8507645ebf4aa41eecbb6",
+    "evaluation/base_downstream/rank-3.jsonl": "fad0c188702e0abdaaa59a224a082383224d0c7697ef9f687bb1e026a08e0c97",
+    "evaluation/base_downstream/rank-4.jsonl": "c7017ca695eb6e24aaf08be293d7ee0bf68da62a265c65303b2d02666cd535f8",
+    "evaluation/base_downstream/rank-5.jsonl": "d25de1d8f7ef397ea1fa858f8e9144f3b8e64fbcd68355db00fedfbbb292c5f3",
+    "evaluation/base_downstream/rank-6.jsonl": "7551fd8b3dd1b866fc00a689eb4a167e35b4b6d55f794cd3e9a27d974dd0b6c1",
+    "evaluation/base_downstream/rank-7.jsonl": "62f5c981274d5d09e05a5a8eefef16f4c71ec060e111b001b4501efcf5ae6854",
+    "evaluation/candidate_downstream/rank-0.jsonl": "feebac314984c3282523e72313d1497f8c1cb5139fcbd5f47e714b717687993a",
+    "evaluation/candidate_downstream/rank-1.jsonl": "db39daf549a8bce641ca0cb06537178dbcbe960f8a9eafb687b32f61183feb52",
+    "evaluation/candidate_downstream/rank-2.jsonl": "0163fcd485cf227ebc54803b880f27d4d7566c001b367fc7b437e79634b01a3e",
+    "evaluation/candidate_downstream/rank-3.jsonl": "62969dd83397d4d58931f8b08a44495c7a68f63981f9cc7be27f8764d54ff480",
+    "evaluation/candidate_downstream/rank-4.jsonl": "ce9ce0e1bfa246fb277c9cbb5098bae06ca9754b30812831b3aa598d60af521b",
+    "evaluation/candidate_downstream/rank-5.jsonl": "b899c871375d0fb14245dcd7efda40c79681e1e6336c97d13844b1bdfa354e6a",
+    "evaluation/candidate_downstream/rank-6.jsonl": "8ed48ccc2c5c4e5921c7aeda460ba46331e507865ad0d8d506395f153a07a2d8",
+    "evaluation/candidate_downstream/rank-7.jsonl": "5eb7b39f1f24af80c20bde12629c2ce7c25d5bb87b41204ccc0d46da9c04ddb3",
+    "evaluation/base_retention/rank-0.jsonl": "833d343aba2870b2fda13dbd3c7a6a1fc9d7a01f218bc18f7d29979b88fb52e9",
+    "evaluation/base_retention/rank-1.jsonl": "1771fcb938b5ead42af7898b84733e896383ebbbd3d2132d78b1278d7555f5bb",
+    "evaluation/base_retention/rank-2.jsonl": "2439bff4e9b4bfee34b9577783650503db08fdd5c2f679a1208cdcfcc3e3d004",
+    "evaluation/base_retention/rank-3.jsonl": "b4f3500d926d5edaf810a6e317c7b6014b4d91835e413b7c7d56db56f3d1d031",
+    "evaluation/base_retention/rank-4.jsonl": "302c0d07787fd29f22de5457fbe1777023024f9abef5cde2a6fd063f9c8f5a43",
+    "evaluation/base_retention/rank-5.jsonl": "bc2c2ffbb65fadfedea5d77805edcde05f1f0805d0a363c69c10d34b95ac33a7",
+    "evaluation/base_retention/rank-6.jsonl": "14181f219ad8a7d1caca64022bad46bffcacd1accfe711e0fad88cd4ac06d233",
+    "evaluation/base_retention/rank-7.jsonl": "9d4e8d4efb5e57df4ebae2d71fc0ab8ce544f5c3e5bff5c297e5f1630dd0aecc",
+    "evaluation/candidate_retention/rank-0.jsonl": "b814bf7b6b62b15f36be0104d7c0c56670b30ebe512f125fad93a96389290dd3",
+    "evaluation/candidate_retention/rank-1.jsonl": "6ee665f6243b258d591d8df6489cfa212ce9e185e0804840773cf4e4e2d08700",
+    "evaluation/candidate_retention/rank-2.jsonl": "bdf8b58496d7d02b2fa9dbd7772087a23e98688c478cc8a32c720e82bf1aead6",
+    "evaluation/candidate_retention/rank-3.jsonl": "c1ec20f60231c8c9bc640c7fc60a0923c977fe2b664d85c922eb1610a6cab104",
+    "evaluation/candidate_retention/rank-4.jsonl": "177d93c5ed370382f0bf8f773aa70a1bea0696d6201f3d205b839809e50c798b",
+    "evaluation/candidate_retention/rank-5.jsonl": "0d800e16936d4b5d2487d4c4bcd2c83a31f628f9a04d747d395ba6a3669cc80f",
+    "evaluation/candidate_retention/rank-6.jsonl": "738ec0000ae8b791c31a85c9b4317b043fad911ce4c522388826c3582d6c1c88",
+    "evaluation/candidate_retention/rank-7.jsonl": "608c9258e484759641567a44b6171cfd6213aa26448dc23dff9e04f6342bd4e7"
+  },
+  "long_probe_manual_review": "All 16 base/candidate outputs inspected. Candidate 8K outputs contain the correct code followed by a Chinese full stop, so strict exact remains 0/4. At 128K, the candidate gives the correct code with unrelated continuation only for the 95% position; at 5%, 33% and 67% it claims no document/record. Strict exact remains 0/4. These results do not demonstrate reliable long-context retrieval or 1M capability."
+}

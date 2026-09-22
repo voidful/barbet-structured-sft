@@ -1,0 +1,18 @@
+{
+  "id": "OCR_natural",
+  "kind": "new_natural_instruction",
+  "messages": [
+    {
+      "role": "system",
+      "content": "請遵照要求，忠實使用提供的文字資訊。"
+    },
+    {
+      "role": "user",
+      "content": "從「品名：茶葉；數量：12；訂單編號：TW-0096」擷取訂單編號，只輸出編號。"
+    }
+  ],
+  "reference": "TW-0096",
+  "max_new_tokens": 256,
+  "reference_note": "Not used as assistant input. Structured requests intentionally contain a visible reference.",
+  "record_id": null
+}

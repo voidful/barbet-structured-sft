@@ -1,0 +1,18 @@
+{
+  "id": "ASR_natural",
+  "kind": "new_natural_instruction",
+  "messages": [
+    {
+      "role": "system",
+      "content": "請遵照要求，忠實使用提供的文字資訊。"
+    },
+    {
+      "role": "user",
+      "content": "參照逐字稿：「明天下午兩點開會。」辨識候選：「明天下午三點開會。」請依參照修正候選，只輸出修正後的句子。"
+    }
+  ],
+  "reference": "明天下午兩點開會。",
+  "max_new_tokens": 256,
+  "reference_note": "Not used as assistant input. Structured requests intentionally contain a visible reference.",
+  "record_id": null
+}

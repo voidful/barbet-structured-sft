@@ -1,0 +1,13 @@
+name: Improvement proposal
+description: Propose a concrete documentation, runtime or evaluation improvement.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and intended result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or proposed validation

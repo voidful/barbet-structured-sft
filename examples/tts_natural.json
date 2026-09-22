@@ -1,0 +1,18 @@
+{
+  "id": "TTS_natural",
+  "kind": "new_natural_instruction",
+  "messages": [
+    {
+      "role": "system",
+      "content": "請遵照要求，忠實使用提供的文字資訊。"
+    },
+    {
+      "role": "user",
+      "content": "請將驗證碼 5083 改寫成逐位朗讀的繁體中文數字，0 讀作「零」。只輸出讀法，不加空格或說明。"
+    }
+  ],
+  "reference": "五零八三",
+  "max_new_tokens": 256,
+  "reference_note": "Not used as assistant input. Structured requests intentionally contain a visible reference.",
+  "record_id": null
+}

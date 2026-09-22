@@ -1,0 +1,27 @@
+{
+  "root": "outputs/sft_20260916",
+  "model_revision": "4dbb35216a32de59570a3f0d164804f25c82009d",
+  "dataset_revision": "0bf2389cbcd6e828af9df0676aed56abc61c4c2e",
+  "seed": 42,
+  "epochs": 1,
+  "global_batch_examples": 128,
+  "micro_token_budget": 8192,
+  "max_micro_examples": 4,
+  "learning_rate": 0.00001,
+  "min_lr_ratio": 0.1,
+  "warmup_ratio": 0.03,
+  "betas": [0.9, 0.95],
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "save_steps": 500,
+  "eval_steps": 500,
+  "validation_per_family": 4,
+  "notes": {
+    "schedule": "1 epoch, cosine: Zephyr full SFT precedent; exact LR 1e-5 and final ratio 0.1 are conservative heuristics for this hybrid 1B",
+    "warmup_batch": "3% warmup and 128 examples: Tulu 3 SFT precedent",
+    "optimizer": "AdamW beta 0.9/0.95 from LLaMA/OLMo; weight decay 0.01 is a task heuristic",
+    "precision": "FP32 parameters, gradient reduction and Adam states, BF16 autocast; original model kernels",
+    "length": "All complete sequences, no truncation; adaptive microbatches, no cross-example packing",
+    "sources": ["https://raw.githubusercontent.com/huggingface/alignment-handbook/main/recipes/zephyr-7b-beta/sft/config_full.yaml", "https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B-SFT"]
+  }
+}

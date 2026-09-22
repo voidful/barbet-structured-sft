@@ -1,0 +1,19 @@
+{
+  "step": 7657,
+  "scope": "full_epoch_export",
+  "tensors_checked": 391,
+  "stored_parameters": 1118799096,
+  "dtype_census": {
+    "torch.bfloat16": 1118798760,
+    "torch.float32": 336
+  },
+  "all_weights_match_cast_training_checkpoint": true,
+  "all_weights_finite": true,
+  "cpu_inference_finite": true,
+  "cpu_cache_present": true,
+  "cuda_initialized": false,
+  "cuda_visible_devices": "",
+  "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
+  "tokenizer_sha256": "f84754e42cc4b08d5573a6b7306635e86ed04fff68ee707662d76d7044917176",
+  "passed": true
+}

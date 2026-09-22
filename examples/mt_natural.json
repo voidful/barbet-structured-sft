@@ -1,0 +1,18 @@
+{
+  "id": "MT_natural",
+  "kind": "new_natural_instruction",
+  "messages": [
+    {
+      "role": "system",
+      "content": "請遵照要求，忠實使用提供的文字資訊。"
+    },
+    {
+      "role": "user",
+      "content": "將「The train leaves at six.」翻譯成繁體中文，只輸出譯文。"
+    }
+  ],
+  "reference": "火車六點出發。",
+  "max_new_tokens": 256,
+  "reference_note": "Not used as assistant input. Structured requests intentionally contain a visible reference.",
+  "record_id": null
+}

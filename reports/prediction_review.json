@@ -1,0 +1,68 @@
+{
+  "model_revision": "004ef70881dcb87f1b423951bd418f1748db8b13",
+  "results": [
+    {
+      "id": "ASR_CORRECTION",
+      "canonical_exact": false,
+      "output_text_exact": true,
+      "edit_operations_exact": true,
+      "differences": {
+        "confidence_target": {
+          "expected": 0.97,
+          "prediction": 0.98
+        }
+      }
+    },
+    {
+      "id": "TTS_SPOKEN_FORM",
+      "canonical_exact": true,
+      "output_text_exact": true,
+      "edit_operations_exact": true,
+      "differences": {}
+    },
+    {
+      "id": "OCR_CORRECTION",
+      "canonical_exact": false,
+      "output_text_exact": true,
+      "edit_operations_exact": true,
+      "differences": {
+        "confidence_target": {
+          "expected": 0.97,
+          "prediction": 0.98
+        }
+      }
+    },
+    {
+      "id": "MT_POST_EDIT",
+      "canonical_exact": true,
+      "output_text_exact": true,
+      "edit_operations_exact": true,
+      "differences": {}
+    },
+    {
+      "id": "ASR_natural",
+      "exact_string": false,
+      "eos": true,
+      "limit_reached": false
+    },
+    {
+      "id": "TTS_natural",
+      "exact_string": false,
+      "eos": false,
+      "limit_reached": true
+    },
+    {
+      "id": "OCR_natural",
+      "exact_string": false,
+      "eos": true,
+      "limit_reached": false
+    },
+    {
+      "id": "MT_natural",
+      "exact_string": false,
+      "eos": true,
+      "limit_reached": false
+    }
+  ],
+  "manual_natural_review": "ASR repeats the request; TTS changes the digit instruction and repeats xdb until the token limit; OCR labels the product rather than returning the order number; MT repeats the English sentence instead of translating. None of these four outputs satisfies its instruction."
+}

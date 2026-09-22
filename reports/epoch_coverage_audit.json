@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "steps_checked": 7657,
+  "unique_examples": 980000,
+  "every_row_once": true,
+  "every_step_coverage_matches": true,
+  "all_logged_losses_gradients_learning_rates_finite": true,
+  "examples": 980000,
+  "tokens": 1490165039,
+  "supervised_tokens": 225601357,
+  "trainer_sha256": "39ab25885ac0c27106985139b180819e6e95d45db58a116cacd34d62d78c35a3",
+  "common_sha256": "d5d3e8f9ca89b7f113ca4cb7d2988eacda42ca0094bca8ca5772bf11d104d72b",
+  "data_manifest_sha256": "67117cd9152e9dcb21ae11bb3d6097a5d8869fab50daabc8503995323a0bedf2",
+  "metrics_sha256": "9cfbbe810aeb06de84eb9a68a7fc91acf6d092984b0367bbf413da04e0adb3e0",
+  "scope": "Deterministic epoch ordering and logged counters; not an independent replay of optimizer updates"
+}
