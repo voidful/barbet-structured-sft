@@ -29,8 +29,18 @@ preserves BF16 weights plus the original 336 FP32 Mamba parameters.
 Do not globally cast the model. The original tokenizer and role tokens
 are unchanged. Transformers 5 chat tokenization uses `return_dict=False`.
 
-Install the pinned environment from the repository root. Native packages
-may need matching PyTorch/CUDA headers and a compiler. CPU works for short
+Install the pinned environment from the repository root, with PyTorch
+available before building native packages:
+
+```bash
+python -m pip install torch==2.11.0 packaging ninja setuptools wheel
+python -m pip install --no-build-isolation -r requirements-inference.txt
+```
+
+Build isolation is disabled so native extensions use the installed PyTorch;
+see the [Mamba installation instructions](https://github.com/state-spaces/mamba#installation).
+Use a CUDA-enabled wheel compatible with your host, matching CUDA headers
+and a compiler. The recorded environment used CUDA 13.0. CPU works for short
 prompts but is slow; long prompts require CUDA, Mamba scan kernels and
 sufficient memory. Eight H200 GPUs were used for training, not a claim
 that eight are required for short inference.

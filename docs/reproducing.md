@@ -35,7 +35,8 @@ no cross-example packing and no sequence truncation.
 ## Commands, when base access is available
 
 ```bash
-python -m pip install -r requirements-training.txt
+python -m pip install torch==2.11.0 packaging ninja setuptools wheel
+python -m pip install --no-build-isolation -r requirements-training.txt
 python scripts/prepare_reproduction.py --include-base
 python training/prepare_downstream_sft.py --root outputs/sft_20260916
 torchrun --standalone --nproc_per_node=8 training/train_downstream_sft.py \

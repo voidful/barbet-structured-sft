@@ -25,7 +25,8 @@ git clone https://github.com/voidful/barbet-structured-sft.git
 cd barbet-structured-sft
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-inference.txt
+python -m pip install torch==2.11.0 packaging ninja setuptools wheel
+python -m pip install --no-build-isolation -r requirements-inference.txt
 python scripts/infer.py --example ocr_correction --device cuda:0
 ```
 
