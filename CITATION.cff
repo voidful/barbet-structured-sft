@@ -4,7 +4,8 @@ type: software
 title: "Barbet 1B Structured SFT"
 authors:
   - family-names: "voidful"
-version: "0.1.0"
+version: "0.1.1"
+license: "Apache-2.0"
 date-released: "2026-09-22"
 url: "https://github.com/voidful/barbet-structured-sft"
 repository-code: "https://github.com/voidful/barbet-structured-sft"

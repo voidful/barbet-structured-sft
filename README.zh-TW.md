@@ -48,6 +48,6 @@ Mamba 與 causal-conv1d 需要相容的 CUDA 建置環境。載入器會保留
 [範例](docs/examples.md) · [架構](docs/architecture.md) ·
 [貢獻方式](CONTRIBUTING.md) · [引用](CITATION.cff)
 
-**授權狀態：目前為公開存取，尚未取得明確開源授權指定。**
-原有 `other` 與資料集存取聲明保留，未自行改成 Apache、MIT 或 CC。
-詳見 [LICENSE](LICENSE) 與[授權說明](docs/licensing.md)。
+**Apache-2.0 授權。** 本專案程式碼、發布的 SFT 權重、文件與隨附範例
+採用 Apache License 2.0；第三方元件及另行發布的完整訓練資料集保留各自條款。
+詳見 [LICENSE](LICENSE)、[NOTICE.md](NOTICE.md) 與[授權說明](docs/licensing.md)。

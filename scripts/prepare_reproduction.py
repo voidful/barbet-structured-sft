@@ -17,9 +17,9 @@ def main():
     else:
         if (args.root/'base/model.safetensors').exists():
             parser.error('SFT-only preparation expects no base weights; use a separate output root.')
-        snapshot_download('OpenFormosa/barbet-1b-structured-sft',revision='v0.1.0',
+        snapshot_download('OpenFormosa/barbet-1b-structured-sft',revision='v0.1.1',
                           local_dir=args.root/'public_sft')
-        snapshot_download('OpenFormosa/barbet-1b-structured-sft',revision='v0.1.0',
+        snapshot_download('OpenFormosa/barbet-1b-structured-sft',revision='v0.1.1',
                           local_dir=args.root/'base',allow_patterns=['*token*','vocab.json','merges.txt','config.json'])
     snapshot_download('voidful/barbet-sft',repo_type='dataset',revision='0bf2389cbcd6e828af9df0676aed56abc61c4c2e',
                       local_dir=args.root/'dataset',allow_patterns=['data/*.parquet','code/**','README.md','LICENSE_DATA.md'])

@@ -1,7 +1,7 @@
 {
   "model_id": "OpenFormosa/barbet-1b-structured-sft",
   "github": "voidful/barbet-structured-sft",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "model_sha256": "ea16e76ea8539ee9ad307ef4e202a94a2f86a96ccdbf22b2c34b95be0523895d",
   "source_model": "OpenFormosa/barbet-1b-base",
   "source_sft_revision": "004ef70881dcb87f1b423951bd418f1748db8b13",
@@ -12,10 +12,13 @@
   "publication_date": "2026-09-22",
   "report_sanitization": "Local filesystem locations removed; measured metrics and weight identity preserved.",
   "full_retraining_limitation": "The original base is a separate access-controlled repository; the legacy development retention corpus is not distributed.",
-  "license_status": "Public access; an explicit open-source/model license grant is pending owner confirmation.",
+  "license_status": "Apache-2.0 for the released project code, SFT weights, documentation and bundled examples; third-party components retain their own terms.",
   "source_reports": {
     "training_summary.json": "a7b5e19571cd1cd20a41484529edaeac14838db104d747bd926f1b6df78e98c2",
     "evaluation_summary.json": "29005d64a75c927ba9fa37b5a3532c0b8f8b299d22a25ef3806d41e397784aea",
     "package_validation.json": "27ad31f7ca2162054d67e99a7463f81c162f712974d0440cda607e99b93a4102"
-  }
+  },
+  "license": "Apache-2.0",
+  "license_grant_date": "2026-09-22",
+  "license_grant_authority": "Explicit project-owner selection"
 }

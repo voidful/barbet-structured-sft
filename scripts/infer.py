@@ -13,7 +13,7 @@ def main():
     inputs.add_argument('--messages', type=Path, help='JSON messages array or example object')
     inputs.add_argument('--prompt', help='Plain instruction; free-form capability remains weak')
     parser.add_argument('--model', default='OpenFormosa/barbet-1b-structured-sft')
-    parser.add_argument('--revision', default='v0.1.0')
+    parser.add_argument('--revision', default='v0.1.1')
     parser.add_argument('--local-model', type=Path)
     parser.add_argument('--device', default='cuda:0')
     parser.add_argument('--max-new-tokens', type=int)

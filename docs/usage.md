@@ -24,7 +24,7 @@ hits the limit is not silently reported as complete.
 
 ## Precision and runtime
 
-Default model: `OpenFormosa/barbet-1b-structured-sft`, revision `v0.1.0`. The verified loader
+Default model: `OpenFormosa/barbet-1b-structured-sft`, revision `v0.1.1`. The verified loader
 preserves BF16 weights plus the original 336 FP32 Mamba parameters.
 Do not globally cast the model. The original tokenizer and role tokens
 are unchanged. Transformers 5 chat tokenization uses `return_dict=False`.

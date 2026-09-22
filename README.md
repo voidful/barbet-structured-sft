@@ -30,7 +30,7 @@ python -m pip install --no-build-isolation -r requirements-inference.txt
 python scripts/infer.py --example ocr_correction --device cuda:0
 ```
 
-The inference command downloads the pinned `v0.1.0` HF release, preserves
+The inference command downloads the pinned `v0.1.1` HF release, preserves
 the 336 FP32 Mamba parameters, applies the published chat template, and
 prints the model's raw answer. No HF login is required for this public
 checkpoint. Short CPU inference is also supported with `--device cpu`.
@@ -95,8 +95,9 @@ weights. See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md),
 
 ## License and citation
 
-**Public access currently does not include an explicit open-source license
-grant.** The original model metadata is `other`; the dataset has a public-access
-statement. No Apache/MIT/CC license is inferred from visibility. See
-[LICENSE](LICENSE) and [licensing details](docs/licensing.md).
+**Apache-2.0.** The project code, released SFT weights, documentation and
+bundled examples are licensed under the Apache License, Version 2.0.
+Third-party components retain their own terms; the separately hosted full
+training dataset retains its own publication terms. See [LICENSE](LICENSE),
+[NOTICE.md](NOTICE.md) and [licensing details](docs/licensing.md).
 Cite this software/model release using [CITATION.cff](CITATION.cff).

@@ -11,7 +11,8 @@ Do not update recorded model outputs by hand. New evaluation claims need
 frozen inputs, source/model identities and raw results. Keep held-out
 evaluation examples out of training.
 
-Documentation corrections and issue reports are welcome. Because an
-explicit project license is still pending, contributors should confirm
-the applicable terms before submitting reusable code or data. No implied
-broad license grant is created by this contribution guide.
+Documentation corrections and issue reports are welcome. Unless you
+explicitly state otherwise, contributions intentionally submitted for
+inclusion are provided under Apache-2.0, as described in Section 5 of
+[LICENSE](LICENSE). Preserve third-party notices and identify any material
+submitted under separate terms.
